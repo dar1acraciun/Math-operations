@@ -1,5 +1,20 @@
 def power(base, exponent):
-    return base ** exponent
+    powers = [1]  # Initialize with the base case
+
+    # Precompute powers of the base up to the exponent
+    for _ in range(exponent.bit_length() - 1):
+        powers.append(powers[-1] * powers[-1])
+
+    result = 1
+    mask = 1 << (exponent.bit_length() - 1)
+
+    # Multiply relevant precomputed powers to get the final result
+    for power in powers[::-1]:
+        result *= power if (exponent & mask) else 1
+        mask >>= 1
+
+    return result
+ 
 def fibbonacci(n):
     if n <= 0:
         return 0
