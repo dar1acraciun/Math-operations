@@ -1,2 +1,4 @@
 flask
 pydantic
+mysql-connector-python
+PyJWT

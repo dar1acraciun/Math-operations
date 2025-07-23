@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathSolve - Înregistrare</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        /* Floating Math Symbols */
+        .math-symbol {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.08);
+            font-size: 3rem;
+            animation: float 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .math-symbol:nth-child(1) { top: 10%; left: 8%; animation-delay: 0s; }
+        .math-symbol:nth-child(2) { top: 20%; right: 12%; animation-delay: 1.5s; }
+        .math-symbol:nth-child(3) { bottom: 20%; left: 12%; animation-delay: 3s; }
+        .math-symbol:nth-child(4) { top: 65%; right: 6%; animation-delay: 4.5s; }
+        .math-symbol:nth-child(5) { bottom: 10%; right: 18%; animation-delay: 6s; }
+        .math-symbol:nth-child(6) { top: 45%; left: 3%; animation-delay: 2s; }
+        .math-symbol:nth-child(7) { top: 80%; left: 25%; animation-delay: 7s; }
+
+        /* Signup Container */
+        .signup-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            margin: 2rem;
+            animation: slideInUp 0.8s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .signup-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2, #ff6b6b, #ffa726);
+            background-size: 200% 100%;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        /* Header */
+        .signup-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            animation: logoGlow 2s ease-in-out infinite alternate;
+        }
+
+        .signup-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Form Styles */
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .form-group {
+            position: relative;
+            flex: 1;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-input.valid {
+            border-color: #4CAF50;
+        }
+
+        .form-input.invalid {
+            border-color: #f44336;
+        }
+
+        .form-input::placeholder {
+            color: #999;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus::placeholder {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        /* Input Icons */
+        .input-icon {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus + .input-icon {
+            color: #667eea;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .form-input.valid + .input-icon {
+            color: #4CAF50;
+        }
+
+        .form-input.invalid + .input-icon {
+            color: #f44336;
+        }
+
+        /* Password Strength Indicator */
+        .password-strength {
+            margin-top: 0.5rem;
+            height: 4px;
+            background: #e1e5e9;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .strength-bar {
+            height: 100%;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .strength-weak { background: #f44336; width: 33%; }
+        .strength-medium { background: #ff9800; width: 66%; }
+        .strength-strong { background: #4CAF50; width: 100%; }
+
+        .strength-text {
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            color: #666;
+        }
+
+        /* Terms and Privacy */
+        .terms-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .terms-container input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #667eea;
+            margin-top: 0.1rem;
+        }
+
+        .terms-container a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .terms-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Signup Button */
+        .signup-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .signup-btn:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .signup-btn:disabled {
+            background: linear-gradient(45deg, #ccc, #999);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .signup-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .signup-btn:hover:not(:disabled)::before {
+            left: 100%;
+        }
+
+        /* Divider */
+        .divider {
+            text-align: center;
+            margin: 1.5rem 0;
+            position: relative;
+            color: #999;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e1e5e9, transparent);
+        }
+
+        .divider span {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0 1rem;
+        }
+
+        /* Social Signup */
+        .social-signup {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-btn {
+            flex: 1;
+            padding: 0.8rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .social-btn:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .google-btn { color: #db4437; }
+        .microsoft-btn { color: #0078d4; }
+
+        /* Login Link */
+        .login-link {
+            text-align: center;
+            margin-top: 2rem;
+            color: #666;
+        }
+
+        .login-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .login-link a:hover {
+            color: #764ba2;
+        }
+
+        /* Back to Home */
+        .back-home {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-home:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+
+        /* Progress Steps */
+        .progress-steps {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e1e5e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #999;
+            transition: all 0.3s ease;
+        }
+
+        .step.active {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .step.completed {
+            background: #4CAF50;
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        @keyframes logoGlow {
+            0% { filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.3)); }
+            100% { filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.6)); }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .signup-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .back-home {
+                top: 1rem;
+                left: 1rem;
+            }
+
+            .social-signup {
+                flex-direction: column;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .progress-steps {
+                gap: 0.5rem;
+            }
+
+            .step {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Loading State */
+        .loading {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .loading .signup-btn {
+            background: linear-gradient(45deg, #ccc, #999);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Math Symbols -->
+    <div class="math-symbol">∑</div>
+    <div class="math-symbol">∫</div>
+    <div class="math-symbol">π</div>
+    <div class="math-symbol">√</div>
+    <div class="math-symbol">∞</div>
+    <div class="math-symbol">≠</div>
+    <div class="math-symbol">±</div>
+
+    <!-- Back to Home -->
+    <a href="#" class="back-home" onclick="goHome()">
+        ← Înapoi la pagina principală
+    </a>
+
+    <!-- Signup Container -->
+    <div class="signup-container">
+        <div class="signup-header">
+            <div class="logo">MathSolve</div>
+            <div class="signup-subtitle">Creează-ți contul gratuit</div>
+        </div>
+
+        <div class="progress-steps">
+            <div class="step active" id="step1">1</div>
+            <div class="step" id="step2">2</div>
+            <div class="step" id="step3">✓</div>
+        </div>
+
+        <form class="signup-form" id="signupForm" method="POST" action="/register">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" class="form-input" id="firstName" name="first_name" placeholder="Prenume" required>
+                    <div class="input-icon">👤</div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" id="lastName" name="last_name" placeholder="Nume" required>
+                    <div class="input-icon">👤</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="email" class="form-input" id="email" name="email" placeholder="Adresa de email" required>
+                <div class="input-icon">📧</div>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" class="form-input" id="phone" name="phone" placeholder="Număr de telefon (opțional)">
+                <div class="input-icon">📱</div>
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-input" id="password" name="password" placeholder="Parola" required>
+                <div class="input-icon">🔒</div>
+                <div class="password-strength">
+                    <div class="strength-bar" id="strengthBar"></div>
+                </div>
+                <div class="strength-text" id="strengthText">Introdu o parolă</div>
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-input" id="confirmPassword" name="conf_password" placeholder="Confirmă parola" required>
+                <div class="input-icon">🔒</div>
+            </div>
+
+            <div class="terms-container">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">
+                    Sunt de acord cu <a href="#">Termenii și Condițiile</a> și <a href="#">Politica de Confidențialitate</a> ale MathSolve.
+                </label>
+            </div>
+
+            <button type="submit" class="signup-btn" disabled>
+                Creează cont
+            </button>
+        </form>
+
+        <div class="divider">
+            <span>sau</span>
+        </div>
+
+        <div class="social-signup">
+            <button class="social-btn google-btn" onclick="socialSignup('google')">
+                <span>🔍</span> Google
+            </button>
+            <button class="social-btn microsoft-btn" onclick="socialSignup('microsoft')">
+                <span>Ⓜ️</span> Microsoft
+            </button>
+        </div>
+
+        <div class="login-link">
+            Ai deja cont? <a href="#" onclick="goToLogin()">Autentifică-te aici</a>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const form = document.getElementById('signupForm');
+        const signupBtn = document.querySelector('.signup-btn');
+
+        // Form validation
+        const inputs = {
+            firstName: document.getElementById('firstName'),
+            lastName: document.getElementById('lastName'),
+            email: document.getElementById('email'),
+            phone: document.getElementById('phone'),
+            password: document.getElementById('password'),
+            confirmPassword: document.getElementById('confirmPassword'),
+            terms: document.getElementById('terms')
+        };
+
+        // Password strength checker
+        function checkPasswordStrength(password) {
+            let strength = 0;
+            let feedback = '';
+
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            const strengthBar = document.getElementById('strengthBar');
+            const strengthText = document.getElementById('strengthText');
+
+            if (password.length === 0) {
+                strengthBar.className = 'strength-bar';
+                strengthText.textContent = 'Introdu o parolă';
+                return 0;
+            }
+
+            if (strength <= 2) {
+                strengthBar.className = 'strength-bar strength-weak';
+                strengthText.textContent = 'Parolă slabă';
+                return 1;
+            } else if (strength <= 3) {
+                strengthBar.className = 'strength-bar strength-medium';
+                strengthText.textContent = 'Parolă medie';
+                return 2;
+            } else {
+                strengthBar.className = 'strength-bar strength-strong';
+                strengthText.textContent = 'Parolă puternică';
+                return 3;
+            }
+        }
+
+        // Email validation
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Phone validation (optional)
+        function validatePhone(phone) {
+            if (!phone) return true; // Optional field
+            const re = /^[0-9+\-\s()]{10,}$/;
+            return re.test(phone);
+        }
+
+        // Real-time validation
+        function validateForm() {
+            let isValid = true;
+
+            // First name validation
+            if (inputs.firstName.value.trim().length < 2) {
+                inputs.firstName.classList.add('invalid');
+                inputs.firstName.classList.remove('valid');
+                isValid = false;
+                updateStep(1);
+            } else {
+                inputs.firstName.classList.add('valid');
+                inputs.firstName.classList.remove('invalid');
+            }
+
+            // Last name validation
+            if (inputs.lastName.value.trim().length < 2) {
+                inputs.lastName.classList.add('invalid');
+                inputs.lastName.classList.remove('valid');
+                isValid = false;
+                updateStep(1);
+            } else {
+                inputs.lastName.classList.add('valid');
+                inputs.lastName.classList.remove('invalid');
+            }
+
+            // Email validation
+            if (!validateEmail(inputs.email.value)) {
+                inputs.email.classList.add('invalid');
+                inputs.email.classList.remove('valid');
+                isValid = false;
+                updateStep(1);
+            } else {
+                inputs.email.classList.add('valid');
+                inputs.email.classList.remove('invalid');
+                if (currentStep < 2) updateStep(2);
+            }
+
+            // Phone validation
+            if (!validatePhone(inputs.phone.value)) {
+                inputs.phone.classList.add('invalid');
+                inputs.phone.classList.remove('valid');
+                isValid = false;
+            } else {
+                inputs.phone.classList.add('valid');
+                inputs.phone.classList.remove('invalid');
+            }
+
+            // Password validation
+            const passwordStrength = checkPasswordStrength(inputs.password.value);
+            if (passwordStrength < 2) {
+                inputs.password.classList.add('invalid');
+                inputs.password.classList.remove('valid');
+                isValid = false;
+            } else {
+                inputs.password.classList.add('valid');
+                inputs.password.classList.remove('invalid');
+            }
+
+            // Confirm password validation
+            if (inputs.password.value !== inputs.confirmPassword.value || !inputs.confirmPassword.value) {
+                inputs.confirmPassword.classList.add('invalid');
+                inputs.confirmPassword.classList.remove('valid');
+                isValid = false;
+            } else {
+                inputs.confirmPassword.classList.add('valid');
+                inputs.confirmPassword.classList.remove('invalid');
+                if (currentStep < 3) updateStep(3);
+            }
+
+            // Terms validation
+            if (!inputs.terms.checked) {
+                isValid = false;
+            }
+
+            signupBtn.disabled = !isValid;
+            return isValid;
+        }
+
+        // Update progress steps
+        function updateStep(step) {
+            if (step <= currentStep) return;
+            
+            currentStep = step;
+            
+            for (let i = 1; i <= 3; i++) {
+                const stepEl = document.getElementById(`step${i}`);
+                if (i < currentStep) {
+                    stepEl.classList.add('completed');
+                    stepEl.classList.remove('active');
+                } else if (i === currentStep) {
+                    stepEl.classList.add('active');
+                    stepEl.classList.remove('completed');
+                } else {
+                    stepEl.classList.remove('active', 'completed');
+                }
+            }
+        }
+
+        // Add event listeners
+        Object.values(inputs).forEach(input => {
+            input.addEventListener('input', validateForm);
+            input.addEventListener('blur', validateForm);
+        });
+
+        // Form submission
+        form.addEventListener('submit', function(e) {
+            // Eliminat e.preventDefault() și simularea locală pentru POST real
+        });
+
+        // Social signup
+        function socialSignup(provider) {
+            showMessage(`Înregistrare cu ${provider}...`, 'info');
+            // Here you would implement actual social signup
+        }
+
+        // Navigation functions
+        function goHome() {
+            window.location.href = '/welcome';
+        }
+
+        function goToLogin() {
+            window.location.href = '/login';
+        }
+
+        // Message system
+        function showMessage(message, type = 'info') {
+            const existingMessage = document.querySelector('.message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message message-${type}`;
+            messageDiv.textContent = message;
+            
+            Object.assign(messageDiv.style, {
+                position: 'fixed',
+                top: '20px',
+                right: '20px',
+                padding: '1rem 1.5rem',
+                borderRadius: '10px',
+                color: 'white',
+                fontWeight: '500',
+                zIndex: '9999',
+                animation: 'slideInRight 0.3s ease',
+                maxWidth: '300px'
+            });
+
+            switch(type) {
+                case 'success':
+                    messageDiv.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+                    break;
+                case 'error':
+                    messageDiv.style.background = 'linear-gradient(45deg, #f44336, #da190b)';
+                    break;
+                case 'info':
+                    messageDiv.style.background = 'linear-gradient(45deg, #2196F3, #1976D2)';
+                    break;
+                default:
+                    messageDiv.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+            }
+
+            document.body.appendChild(messageDiv);
+
+            setTimeout(() => {
+                if (messageDiv.parentNode) {
+                    messageDiv.style.animation = 'slideOutRight 0.3s ease';
+                    setTimeout(() => messageDiv.remove(), 300);
+                }
+            }, 4000);
+        }
+
+        // Add slide animations for messages
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Input focus effects
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentNode.style.transform = 'scale(1.02)';
+            });
+
+            input.addEventListener('blur', function() {
+                this.parentNode.style.transform = 'scale(1)';
+            });
+        });
+
+        // Floating math symbols interactions
+        document.querySelectorAll('.math-symbol').forEach((symbol, index) => {
+            symbol.addEventListener('mouseover', function() {
+                this.style.animation = 'none';
+                this.style.transform = 'scale(1.5) rotate(360deg)';
+                this.style.color = 'rgba(255, 255, 255, 0.3)';
+            });
+
+            symbol.addEventListener('mouseout', function() {
+                this.style.animation = `float 8s ease-in-out infinite`;
+                this.style.animationDelay = `${index * 1.5}s`;
+                this.style.transform = '';
+                this.style.color = 'rgba(255, 255, 255, 0.08)';
+            });
+        });
+
+        // Initialize form
+        validateForm();
+    </script>
+</body>
+</html>

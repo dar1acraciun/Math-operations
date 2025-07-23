@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathSolve - Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+
+        /* Floating Math Symbols */
+        .math-symbol {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.08);
+            font-size: 3rem;
+            animation: float 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .math-symbol:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .math-symbol:nth-child(2) { top: 25%; right: 15%; animation-delay: 1.5s; }
+        .math-symbol:nth-child(3) { bottom: 25%; left: 15%; animation-delay: 3s; }
+        .math-symbol:nth-child(4) { top: 60%; right: 8%; animation-delay: 4.5s; }
+        .math-symbol:nth-child(5) { bottom: 15%; right: 20%; animation-delay: 6s; }
+        .math-symbol:nth-child(6) { top: 40%; left: 5%; animation-delay: 2s; }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Calculator Grid */
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Calculator Card */
+        .calculator-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 2rem;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            animation: slideInUp 0.8s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculator-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2, #ff6b6b, #ffa726);
+            background-size: 200% 100%;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        .calculator-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Form Styles */
+        .calc-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Calculate Button */
+        .calc-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calc-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .calc-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .calc-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .calc-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Result Display */
+        .result-display {
+            background: rgba(102, 126, 234, 0.1);
+            border: 2px solid rgba(102, 126, 234, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            word-break: break-all;
+            transition: all 0.3s ease;
+        }
+
+        .result-display.success {
+            background: rgba(76, 175, 80, 0.1);
+            border-color: rgba(76, 175, 80, 0.3);
+            color: #2e7d32;
+        }
+
+        .result-display.error {
+            background: rgba(244, 67, 54, 0.1);
+            border-color: rgba(244, 67, 54, 0.3);
+            color: #c62828;
+        }
+
+        /* Back to Home */
+        .back-home {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .back-home:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+
+        /* Fibonacci Sequence Display */
+        .fibonacci-sequence {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Loading Animation */
+        .loading {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .calculator-card {
+                padding: 1.5rem;
+            }
+
+            .back-home {
+                top: 1rem;
+                left: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .header .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Math Symbols -->
+    <div class="math-symbol">∑</div>
+    <div class="math-symbol">∫</div>
+    <div class="math-symbol">π</div>
+    <div class="math-symbol">√</div>
+    <div class="math-symbol">∞</div>
+    <div class="math-symbol">≠</div>
+
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">MathSolve</div>
+        <div class="subtitle">Calculatoare Matematice Avansate</div>
+    </div>
+
+    <!-- Calculator Grid -->
+    <div class="calculator-grid">
+        
+        <!-- Power Calculator -->
+        <div class="calculator-card">
+            <h2 class="calculator-title">Calculator Putere (a^b)</h2>
+            <form class="calc-form" id="powerForm">
+                <div class="form-group">
+                    <label class="form-label">Baza (a):</label>
+                    <input type="number" class="form-input" id="powerBase" placeholder="Introdu baza..." step="any" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Exponentul (b):</label>
+                    <input type="number" class="form-input" id="powerExponent" placeholder="Introdu exponentul..." step="any" required>
+                </div>
+                <button type="submit" class="calc-btn">Calculează Puterea</button>
+            </form>
+            <div class="result-display" id="powerResult">
+                Rezultatul va apărea aici...
+            </div>
+        </div>
+
+        <div class="calculator-card">
+            <h2 class="calculator-title">Calculator Fibonacci</h2>
+            <form class="calc-form" id="fibonacciForm">
+                <div class="form-group">
+                    <label class="form-label">Poziția în secvență (n):</label>
+                    <input type="number" class="form-input" id="fibonacciN" placeholder="Introdu poziția..." min="0" max="1000" required>
+                </div>
+                <button type="submit" class="calc-btn">Calculează Fibonacci</button>
+            </form>
+            <div class="result-display" id="fibonacciResult">
+                Rezultatul va apărea aici...
+            </div>
+            <div class="fibonacci-sequence" id="fibonacciSequence" style="display: none;">
+                <strong>Secvența:</strong><br>
+            </div>
+        </div>
+
+        <!-- Factorial Calculator -->
+        <div class="calculator-card">
+            <h2 class="calculator-title">Calculator Factorial (n!)</h2>
+            <form class="calc-form" id="factorialForm">
+                <div class="form-group">
+                    <label class="form-label">Numărul (n):</label>
+                    <input type="number" class="form-input" id="factorialN" placeholder="Introdu numărul..." min="0" max="170" required>
+                </div>
+                <button type="submit" class="calc-btn">Calculează Factorial</button>
+            </form>
+            <div class="result-display" id="factorialResult">
+                Rezultatul va apărea aici...
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        // Power Calculator (backend)
+        document.getElementById('powerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const base = parseFloat(document.getElementById('powerBase').value);
+            const exponent = parseFloat(document.getElementById('powerExponent').value);
+            const resultDiv = document.getElementById('powerResult');
+            resultDiv.classList.add('loading');
+            try {
+                const response = await fetch('/api/power', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ base, exponent })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    showResult(resultDiv, data.result, 'success');
+                } else {
+                    showResult(resultDiv, data.error, 'error');
+                }
+            } catch (error) {
+                showResult(resultDiv, 'Eroare la calculul puterii!', 'error');
+            }
+            resultDiv.classList.remove('loading');
+        });
+
+        // Fibonacci Calculator (backend)
+        document.getElementById('fibonacciForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const n = parseInt(document.getElementById('fibonacciN').value);
+            const resultDiv = document.getElementById('fibonacciResult');
+            const sequenceDiv = document.getElementById('fibonacciSequence');
+            resultDiv.classList.add('loading');
+            try {
+                const response = await fetch('/api/fibonacci', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ n })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    showResult(resultDiv, data.result, 'success');
+                    if (data.sequence) {
+                        sequenceDiv.innerHTML = `<strong>Secvența (primele ${data.sequence.length} numere):</strong><br>${data.sequence.join(', ')}`;
+                        sequenceDiv.style.display = 'block';
+                    } else {
+                        sequenceDiv.style.display = 'none';
+                    }
+                } else {
+                    showResult(resultDiv, data.error, 'error');
+                    sequenceDiv.style.display = 'none';
+                }
+            } catch (error) {
+                showResult(resultDiv, 'Eroare la calculul Fibonacci!', 'error');
+                sequenceDiv.style.display = 'none';
+            }
+            resultDiv.classList.remove('loading');
+        });
+
+        // Factorial Calculator (backend)
+        document.getElementById('factorialForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const n = parseInt(document.getElementById('factorialN').value);
+            const resultDiv = document.getElementById('factorialResult');
+            resultDiv.classList.add('loading');
+            try {
+                const response = await fetch('/api/factorial', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ n })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    showResult(resultDiv, data.result, 'success');
+                } else {
+                    showResult(resultDiv, data.error, 'error');
+                }
+            } catch (error) {
+                showResult(resultDiv, 'Eroare la calculul factorialului!', 'error');
+            }
+            resultDiv.classList.remove('loading');
+        });
+
+        // Utility Functions
+        function showResult(element, text, type) {
+            element.textContent = text;
+            element.className = `result-display ${type}`;
+        }
+
+        function goHome() {
+            window.location.href = '#home';
+        }
+
+        // Add floating animation to math symbols
+        document.querySelectorAll('.math-symbol').forEach((symbol, index) => {
+            symbol.addEventListener('mouseover', function() {
+                this.style.animation = 'none';
+                this.style.transform = 'scale(1.5) rotate(360deg)';
+                this.style.color = 'rgba(255, 255, 255, 0.3)';
+            });
+
+            symbol.addEventListener('mouseout', function() {
+                this.style.animation = `float 8s ease-in-out infinite`;
+                this.style.animationDelay = `${index * 1.5}s`;
+                this.style.transform = '';
+                this.style.color = 'rgba(255, 255, 255, 0.08)';
+            });
+        });
+
+        // Input animations
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentNode.parentNode.style.transform = 'scale(1.02)';
+            });
+
+            input.addEventListener('blur', function() {
+                this.parentNode.parentNode.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
