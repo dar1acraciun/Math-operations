@@ -382,7 +382,7 @@
             const resultDiv = document.getElementById('powerResult');
             resultDiv.classList.add('loading');
             try {
-                const response = await fetch('/api/power', {
+                const response = await fetch('/mathSolve/api/power', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ base, exponent })
@@ -407,7 +407,7 @@
             const sequenceDiv = document.getElementById('fibonacciSequence');
             resultDiv.classList.add('loading');
             try {
-                const response = await fetch('/api/fibonacci', {
+                const response = await fetch('/mathSolve/api/fibonacci', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ n })
@@ -439,7 +439,7 @@
             const resultDiv = document.getElementById('factorialResult');
             resultDiv.classList.add('loading');
             try {
-                const response = await fetch('/api/factorial', {
+                const response = await fetch('/mathSolve/api/factorial', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ n })

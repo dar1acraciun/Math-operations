@@ -1,5 +1,8 @@
+
 from flask import Blueprint, request, jsonify
 from controller import math_controller
+from schemas.math_schemas import PowerRequest, PowerResponse, FibonacciRequest, FibonacciResponse, FactorialRequest, FactorialResponse
+from pydantic import ValidationError
 
 math_bp = Blueprint('math_bp', __name__)
 
@@ -7,12 +10,14 @@ math_bp = Blueprint('math_bp', __name__)
 def power():
     data = request.get_json()
     try:
-        base = data.get('base', 0)
-        exponent = data.get('exponent', 0)
-        result, error = math_controller.power(base, exponent)
+        req = PowerRequest(**data)
+        result, error = math_controller.power(req.base, req.exponent)
         if error:
             return jsonify(success=False, error=error)
-        return jsonify(success=True, result=result)
+        resp = PowerResponse(result=result)
+        return jsonify(success=True, **resp.dict())
+    except ValidationError as ve:
+        return jsonify(success=False, error=ve.errors()), 400
     except Exception:
         return jsonify(success=False, error='Eroare la calculul puterii!')
 
@@ -20,11 +25,14 @@ def power():
 def fibonacci():
     data = request.get_json()
     try:
-        n = data.get('n', 0)
-        result, sequence, error = math_controller.fibonacci(n)
+        req = FibonacciRequest(**data)
+        result, sequence, error = math_controller.fibonacci(req.n)
         if error:
             return jsonify(success=False, error=error)
-        return jsonify(success=True, result=result, sequence=sequence)
+        resp = FibonacciResponse(result=result, sequence=sequence)
+        return jsonify(success=True, **resp.dict())
+    except ValidationError as ve:
+        return jsonify(success=False, error=ve.errors()), 400
     except Exception:
         return jsonify(success=False, error='Eroare la calculul Fibonacci!')
 
@@ -32,10 +40,13 @@ def fibonacci():
 def factorial():
     data = request.get_json()
     try:
-        n = data.get('n', 0)
-        result, error = math_controller.factorial(n)
+        req = FactorialRequest(**data)
+        result, error = math_controller.factorial(req.n)
         if error:
             return jsonify(success=False, error=error)
-        return jsonify(success=True, result=result)
+        resp = FactorialResponse(result=result)
+        return jsonify(success=True, **resp.dict())
+    except ValidationError as ve:
+        return jsonify(success=False, error=ve.errors()), 400
     except Exception:
         return jsonify(success=False, error='Eroare la calculul factorialului!')

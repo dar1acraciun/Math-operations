@@ -410,7 +410,7 @@
             <div class="login-subtitle">Bun venit înapoi!</div>
         </div>
 
-        <form class="login-form" id="loginForm" action="/login" method="POST">
+        <form class="login-form" id="loginForm" action="/mathSolve/login" method="POST">
             <div class="form-group">
                 <input type="email" class="form-input" name="email" placeholder="Adresa de email" required>
                 <div class="input-icon">📧</div>
@@ -464,12 +464,12 @@
 
         // Navigation functions
         function goHome() {
-            window.location.href = '/welcome';
+            window.location.href = '/mathSolve/welcome';
         }
 
         function goToSignup() {
             showMessage('Redirectionare către înregistrare...', 'info');
-            window.location.href = '/register';
+            window.location.href = '/mathSolve/register';
         }
 
         // Message system
