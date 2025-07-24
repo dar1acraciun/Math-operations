@@ -2,10 +2,11 @@ from flask import Blueprint, request, send_from_directory, redirect, url_for
 from controller import login_controller, register_controller
 import jwt, os
 from datetime import datetime, timedelta, timezone
-
+from utils.auth_utils import logout_required
 auth_bp = Blueprint('auth_bp', __name__)
 
 @auth_bp.route('/login', methods=['GET'])
+@logout_required
 def login():
     return send_from_directory('view', 'login.html')
 
@@ -28,6 +29,7 @@ def login_post():
         return f"<h2 style='color:red;text-align:center;margin-top:2em;'>{result['message']}</h2>"
 
 @auth_bp.route('/register', methods=['GET'])
+@logout_required
 def register():
     return send_from_directory('view', 'register.html')
 

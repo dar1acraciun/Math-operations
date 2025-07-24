@@ -2,45 +2,33 @@ from flask import Flask
 from flask import send_from_directory, request, make_response, redirect, url_for
 from routes.math_routes import math_bp
 from routes.auth_routes import auth_bp
-from controller import register_controller
-from controller import login_controller
 import os
-import jwt
 from datetime import datetime, timedelta, timezone
-
-
+from utils.auth_utils import login_required, logout_required
+import logging
+import sys
 
 
 app = Flask(__name__)
+app.debug = True  # Set to False in production
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY", "dev_secret")
-
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s %(name)s: %(message)s',
+    handlers=[
+        logging.FileHandler('logger.log', encoding='utf-8'),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
 app.register_blueprint(math_bp, url_prefix="/mathSolve/api")
 app.register_blueprint(auth_bp, url_prefix="/mathSolve/")
 
-# Decorator pentru verificare JWT
-from functools import wraps
-import jwt
-
-def login_required(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        token = request.cookies.get('jwt')
-        if not token:
-            return redirect(url_for('login'))
-        try:
-            jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"])
-        except jwt.ExpiredSignatureError:
-            return redirect(url_for('login'))
-        except jwt.InvalidTokenError:
-            return redirect(url_for('login'))
-        return f(*args, **kwargs)
-    return decorated_function
 
 @app.route('/mathSolve/welcome')
 def welcome():
     return send_from_directory('view', 'index.html')
 
-@app.get('/mathSolve/calculator')
+@app.route('/mathSolve/calculator')
 @login_required
 def calculator():
     return send_from_directory('view', 'calculator.html')

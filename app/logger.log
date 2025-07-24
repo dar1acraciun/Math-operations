@@ -1,0 +1,209 @@
+2025-07-24 11:09:46,227 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:09:46,229 INFO werkzeug:  * Debugger PIN: 420-790-205
+2025-07-24 11:10:30,042 INFO werkzeug:  * Detected change in '/app/main.py', reloading
+2025-07-24 11:20:09,095 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-07-24 11:20:09,095 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-24 11:20:09,097 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:20:09,398 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:20:09,398 INFO werkzeug:  * Debugger PIN: 420-790-205
+2025-07-24 11:20:11,183 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:20:11] "GET /mathSolve/login HTTP/1.1" 200 -
+2025-07-24 11:20:25,594 INFO root: Login attempt for daria.craciun411@gmail.com
+2025-07-24 11:20:25,732 INFO root: Login SUCCESS for daria.craciun411@gmail.com
+2025-07-24 11:20:25,736 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:20:25] "[32mPOST /mathSolve/login HTTP/1.1[0m" 302 -
+2025-07-24 11:20:25,842 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:20:25] "GET /mathSolve/calculator HTTP/1.1" 200 -
+2025-07-24 11:26:29,667 INFO werkzeug:  * Detected change in '/app/main.py', reloading
+2025-07-24 11:26:29,741 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:27:53,258 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+2025-07-24 11:27:53,259 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-24 11:27:53,260 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:27:53,617 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:27:53,619 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:28:02,171 INFO root: Login attempt for daria.craciun411@gmail.com
+2025-07-24 11:28:02,295 INFO root: Login SUCCESS for daria.craciun411@gmail.com
+2025-07-24 11:28:02,301 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:28:02] "[32mPOST /mathSolve/login HTTP/1.1[0m" 302 -
+2025-07-24 11:28:02,387 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:28:02] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-24 11:35:57,105 INFO werkzeug:  * Detected change in '/app/model/operation_model.py', reloading
+2025-07-24 11:35:57,165 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:35:57,645 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:35:57,647 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:36:04,006 INFO werkzeug:  * Detected change in '/app/model/operation_model.py', reloading
+2025-07-24 11:36:04,048 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:36:04,344 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:36:04,345 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:36:13,788 INFO werkzeug:  * Detected change in '/app/model/operation_model.py', reloading
+2025-07-24 11:36:13,822 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:36:14,102 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:36:14,103 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:36:16,259 INFO werkzeug:  * Detected change in '/app/model/operation_model.py', reloading
+2025-07-24 11:36:16,300 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:36:16,599 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:36:16,599 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:45:37,728 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:45:37,788 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:45:38,243 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:45:38,244 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:45:44,653 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:45:44,748 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:45:45,334 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:45:45,335 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:45:52,430 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:45:52,688 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:49:19,786 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+2025-07-24 11:49:19,786 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-24 11:49:19,788 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:49:20,156 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:49:20,157 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:49:26,434 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:49:26] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-24 11:49:30,303 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:49:30] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 11:50:14,417 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:50:14] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 11:50:49,890 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:50:50,002 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:50:50,736 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:50:50,738 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:50:50,846 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:50:50,923 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:50:51,402 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:50:51,404 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:50:52,570 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:50:52,640 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:50:53,091 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:50:53,091 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:50:56,370 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:50:56,446 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:50:56,853 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:50:56,854 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:50:59,074 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:50:59,153 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:50:59,611 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:50:59,612 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:51:03,968 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:51:04,077 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:51:04,495 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:51:04,495 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:51:15,202 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:51:15,301 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:51:15,734 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:51:15,735 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:51:40,867 ERROR root: Error in power calculation
+Traceback (most recent call last):
+  File "/app/controller/math_controller.py", line 14, in power
+    operation_model.insert_operation(db_connection.get_connection(), db_connection.get_cursor(), 'power', {'base': base, 'exponent': exponent}, formatted)
+AttributeError: module 'model.db_connection' has no attribute 'get_cursor'
+2025-07-24 11:51:40,875 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:51:40] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 11:52:57,936 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:52:58,030 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:52:58,493 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:52:58,494 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:53:03,242 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:53:03] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-24 11:53:05,975 ERROR root: Error in power calculation
+Traceback (most recent call last):
+  File "/app/controller/math_controller.py", line 14, in power
+    operation_model.insert_operation(db_connection.get_connection(), db_connection.get_connection.get_cursor(), 'power', {'base': base, 'exponent': exponent}, formatted)
+AttributeError: 'function' object has no attribute 'get_cursor'
+2025-07-24 11:53:05,981 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:53:05] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 11:53:45,068 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:53:45,138 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:53:45,544 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:53:45,548 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:53:48,254 ERROR root: Error in power calculation
+Traceback (most recent call last):
+  File "/app/controller/math_controller.py", line 14, in power
+    operation_model.insert_operation(db_connection.get_connection(), db_connection.get_connection.cursor(), 'power', {'base': base, 'exponent': exponent}, formatted)
+AttributeError: 'function' object has no attribute 'cursor'
+2025-07-24 11:53:48,261 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:53:48] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 11:53:51,925 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:53:51] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-24 11:53:53,871 ERROR root: Error in power calculation
+Traceback (most recent call last):
+  File "/app/controller/math_controller.py", line 14, in power
+    operation_model.insert_operation(db_connection.get_connection(), db_connection.get_connection.cursor(), 'power', {'base': base, 'exponent': exponent}, formatted)
+AttributeError: 'function' object has no attribute 'cursor'
+2025-07-24 11:53:53,875 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:53:53] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 11:54:05,033 ERROR root: Error in power calculation
+Traceback (most recent call last):
+  File "/app/controller/math_controller.py", line 14, in power
+    operation_model.insert_operation(db_connection.get_connection(), db_connection.get_connection.cursor(), 'power', {'base': base, 'exponent': exponent}, formatted)
+AttributeError: 'function' object has no attribute 'cursor'
+2025-07-24 11:54:05,037 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:54:05] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 11:55:18,600 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:55:18,861 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:55:19,471 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:55:19,473 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:55:22,131 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:55:22] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-24 11:55:24,359 ERROR root: Error in power calculation
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/cursor_cext.py", line 310, in execute
+    if not self._connection or self._connection.is_closed():
+ReferenceError: weakly-referenced object no longer exists
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/controller/math_controller.py", line 14, in power
+    operation_model.insert_operation(db_connection.get_connection(), db_connection.get_connection().cursor(), 'power', {'base': base, 'exponent': exponent}, formatted)
+  File "/app/model/operation_model.py", line 13, in insert_operation
+    cursor.execute(query, (endpoint, input_data, result))
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/cursor_cext.py", line 313, in execute
+    raise ProgrammingError("Cursor is not connected", 2055) from err
+mysql.connector.errors.ProgrammingError: 2055: Cursor is not connected
+2025-07-24 11:55:24,371 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:55:24] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 11:56:23,458 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:56:23,549 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:56:24,035 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:56:24,036 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:56:26,285 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:56:26,358 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:56:26,784 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:56:26,785 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:56:29,055 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:56:29] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-24 11:56:30,960 ERROR root: Error in power calculation
+Traceback (most recent call last):
+  File "/app/controller/math_controller.py", line 16, in power
+    operation_model.insert_operation(conn, cursor, 'power', {'base': base, 'exponent': exponent}, formatted)
+  File "/app/model/operation_model.py", line 13, in insert_operation
+    cursor.execute(query, (endpoint, input_data, result))
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/cursor_cext.py", line 328, in execute
+    prepared = self._connection.prepare_for_mysql(params)
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 943, in prepare_for_mysql
+    result = self._cmysql.convert_to_mysql(*params)
+_mysql_connector.MySQLInterfaceError: Python type dict cannot be converted
+2025-07-24 11:56:30,971 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:56:30] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 11:57:54,614 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:57:54,789 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:57:55,538 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:57:55,539 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:58:08,347 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:58:08,420 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:58:08,883 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:58:08,884 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:58:23,733 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 11:58:23,833 INFO werkzeug:  * Restarting with stat
+2025-07-24 11:58:24,384 WARNING werkzeug:  * Debugger is active!
+2025-07-24 11:58:24,385 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 11:58:26,893 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:58:26] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-24 11:58:29,432 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 11:58:29] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 12:08:26,321 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 12:08:26] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 12:22:14,191 INFO werkzeug:  * Detected change in '/app/main.py', reloading
+2025-07-24 12:22:14,261 INFO werkzeug:  * Restarting with stat
+2025-07-24 12:22:14,908 WARNING werkzeug:  * Debugger is active!
+2025-07-24 12:22:14,910 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 12:27:46,936 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 12:27:47,034 INFO werkzeug:  * Restarting with stat
+2025-07-24 12:27:47,668 WARNING werkzeug:  * Debugger is active!
+2025-07-24 12:27:47,669 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 12:27:59,292 INFO werkzeug:  * Detected change in '/app/controller/math_controller.py', reloading
+2025-07-24 12:27:59,335 INFO werkzeug:  * Restarting with stat
+2025-07-24 12:27:59,642 WARNING werkzeug:  * Debugger is active!
+2025-07-24 12:27:59,642 INFO werkzeug:  * Debugger PIN: 640-611-084
+2025-07-24 12:28:19,759 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 12:28:19] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-24 12:28:23,718 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 12:28:23] "POST /mathSolve/api/fibonacci HTTP/1.1" 200 -
+2025-07-24 12:28:31,438 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 12:28:31] "POST /mathSolve/api/factorial HTTP/1.1" 200 -
+2025-07-24 12:28:37,008 INFO werkzeug: 192.168.143.2 - - [24/Jul/2025 12:28:37] "POST /mathSolve/api/factorial HTTP/1.1" 200 -

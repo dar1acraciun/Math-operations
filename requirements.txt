@@ -2,3 +2,4 @@ flask
 pydantic
 mysql-connector-python
 PyJWT
+Flask-Caching
