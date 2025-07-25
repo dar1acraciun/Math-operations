@@ -2,6 +2,7 @@ from model import db_connection
 from model import user_model
 
 import logging
+from utils.kafka_logger import send_log
 
 class LoginController:
     def __init__(self):
@@ -9,6 +10,7 @@ class LoginController:
         self.cursor = self.db.cursor()
 
     def login(self, email, password):
+        send_log("Login attempt", user=email, route="/mathSolve/api/login")
         logging.info(f"Login attempt for {email}")
         user = user_model.get_user_by_email(self.cursor, email)
         if user and user_model.check_password(user, password):

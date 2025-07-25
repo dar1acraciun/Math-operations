@@ -4,3 +4,5 @@ mysql-connector-python
 PyJWT
 Flask-Caching
 redis
+prometheus-flask-exporter
+kafka-python
