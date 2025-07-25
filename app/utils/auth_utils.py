@@ -30,3 +30,13 @@ def logout_required(f):
                 pass
         return f(*args, **kwargs)
     return decorated_function
+
+def get_user_id_from_token():
+    token = request.cookies.get('jwt')
+    try:
+        payload = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=["HS256"])
+        return payload.get('user_id')
+    except jwt.ExpiredSignatureError:
+        return None
+    except jwt.InvalidTokenError:
+        return None

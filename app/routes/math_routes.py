@@ -5,7 +5,7 @@ from schemas.math_schemas import PowerRequest, PowerResponse, FibonacciRequest, 
 from pydantic import ValidationError
 
 math_bp = Blueprint('math_bp', __name__)
-
+math_controller = math_controller.MathController()
 @math_bp.route('/power', methods=['POST'])
 def power():
     data = request.get_json()

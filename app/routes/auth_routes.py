@@ -17,8 +17,10 @@ def login_post():
     login_controller_instance = login_controller.LoginController()
     result = login_controller_instance.login(email, password)
     if result["status"] == "success":
+        user_id = result["user_id"]
         payload = {
             "email": email,
+            "user_id": user_id,
             "exp": (datetime.now(timezone.utc) + timedelta(hours=1)).timestamp()
         }
         token = jwt.encode(payload, os.environ.get("SECRET_KEY", "dev_secret"), algorithm="HS256")

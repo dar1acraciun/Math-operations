@@ -13,7 +13,8 @@ class LoginController:
         user = user_model.get_user_by_email(self.cursor, email)
         if user and user_model.check_password(user, password):
             logging.info(f"Login SUCCESS for {email}")
-            return {"status": "success", "message": "Login successful"}
+            user_id= user[0]
+            return {"status": "success", "message": "Login successful","user_id": user_id}
         else:
             logging.warning(f"Login FAILED for {email}")
             return {"status": "error", "message": "Invalid email or password"}

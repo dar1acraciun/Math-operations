@@ -1,4 +1,4 @@
-def insert_operation(connection,cursor,endpoint, input_data, result):
+def insert_operation(connection,cursor,endpoint, input_data, result,user_id):
     """
     Inserts a new operation into the OPERATIONS table.
     
@@ -7,8 +7,8 @@ def insert_operation(connection,cursor,endpoint, input_data, result):
     :param result: The result of the operation.
     """
     query = """
-    INSERT INTO OPERATIONS (endpoint, input_data, result)
-    VALUES (%s, %s, %s)
+    INSERT INTO OPERATIONS (endpoint, input_data, result,user_id)
+    VALUES (%s, %s, %s,%s)
     """
-    cursor.execute(query, (endpoint, input_data, result))
+    cursor.execute(query, (endpoint, input_data, result, user_id))
     connection.commit()

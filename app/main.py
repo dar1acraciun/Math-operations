@@ -7,11 +7,18 @@ from datetime import datetime, timedelta, timezone
 from utils.auth_utils import login_required, logout_required
 import logging
 import sys
+from utils.cache_utils import cache
+
+
 
 
 app = Flask(__name__)
 app.debug = True  # Set to False in production
+
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY", "dev_secret")
+app.config['CACHE_TYPE'] = 'RedisCache'
+app.config['CACHE_REDIS_URL'] = os.environ.get("REDIS_URL", "redis://redis:6379/0")
+cache.init_app(app)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s %(levelname)s %(name)s: %(message)s',
