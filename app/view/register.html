@@ -498,7 +498,7 @@
             <div class="step" id="step3">✓</div>
         </div>
 
-        <form class="signup-form" id="signupForm" method="POST" action="/register">
+        <form class="signup-form" id="signupForm" >
             <div class="form-row">
                 <div class="form-group">
                     <input type="text" class="form-input" id="firstName" name="first_name" placeholder="Prenume" required>
@@ -734,8 +734,51 @@
         });
 
         // Form submission
-        form.addEventListener('submit', function(e) {
-            // Eliminat e.preventDefault() și simularea locală pentru POST real
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            if (!validateForm()) return;
+
+            const formData = new FormData(form);
+            // Construim payload-ul pentru POST
+            const payload = new URLSearchParams();
+            for (const [key, value] of formData.entries()) {
+                payload.append(key, value);
+            }
+
+            signupBtn.disabled = true;
+            signupBtn.textContent = 'Se procesează...';
+
+            try {
+                // Folosește endpointul corect cu prefixul /mathSolve/register
+                const response = await fetch('/mathSolve/register', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: payload
+                });
+                let data;
+                try {
+                    data = await response.json();
+                } catch {
+                    // fallback dacă backendul nu trimite JSON
+                    const text = await response.text();
+                    data = { error: text };
+                }
+                if (data.success) {
+                    showMessage(data.success, 'success');
+                    form.reset();
+                    document.querySelectorAll('.form-input').forEach(i => i.classList.remove('valid', 'invalid'));
+                } else {
+                    showMessage(data.error || 'Eroare necunoscută', 'error');
+                }
+            } catch (err) {
+                showMessage('Eroare de rețea. Încearcă din nou.', 'error');
+            }
+            signupBtn.disabled = false;
+            signupBtn.textContent = 'Creează cont';
         });
 
         // Social signup
@@ -746,11 +789,11 @@
 
         // Navigation functions
         function goHome() {
-            window.location.href = 'mathSolve/welcome';
+            window.location.href = '/mathSolve/welcome';
         }
 
         function goToLogin() {
-            window.location.href = 'mathSolve/login';
+            window.location.href = '/mathSolve/login';
         }
 
         // Message system

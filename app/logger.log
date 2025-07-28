@@ -1096,3 +1096,608 @@ mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'mathdb.USERS' does
 2025-07-25 13:52:56,237 INFO kafka.consumer.fetcher: Resetting offset for partition TopicPartition(topic='logs', partition=0) to offset 0.
 2025-07-25 13:53:06,040 INFO werkzeug: 192.168.143.2 - - [25/Jul/2025 13:53:06] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
 2025-07-25 13:53:11,952 INFO werkzeug: 192.168.143.2 - - [25/Jul/2025 13:53:11] "GET /mathSolve/kafka-logs HTTP/1.1" 200 -
+2025-07-28 10:23:23,832 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-07-28 10:23:23,833 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-28 10:23:27,579 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 10:23:27,580 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 10:23:27,580 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 10:23:36,381 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 10:23:36,382 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 10:23:36,383 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 10:23:41,393 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 10:23:41,395 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:23:41,395 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:23:41,397 WARNING kafka.client: No node available during check_version; sleeping 0.04 secs
+2025-07-28 10:23:41,438 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 10:23:41,440 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:23:41,440 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:23:41,441 WARNING kafka.client: No node available during check_version; sleeping 0.10 secs
+2025-07-28 10:23:41,537 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 10:23:41,538 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:23:41,539 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:23:41,539 WARNING kafka.client: No node available during check_version; sleeping 0.20 secs
+2025-07-28 10:23:41,743 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 10:23:41,744 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:23:41,745 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:23:41,746 WARNING kafka.client: No node available during check_version; sleeping 0.34 secs
+2025-07-28 10:23:42,092 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 10:23:42,093 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:23:42,093 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:23:42,094 WARNING kafka.client: No node available during check_version; sleeping 0.92 secs
+2025-07-28 10:23:43,017 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 10:23:43,018 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:23:43,019 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:23:43,020 WARNING kafka.client: No node available during check_version; sleeping 0.37 secs
+2025-07-28 10:24:04,798 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.6:5000
+2025-07-28 10:24:04,798 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-28 10:24:04,811 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:24:04,812 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:24:04,812 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:24:04,813 WARNING kafka.client: No node available during check_version; sleeping 0.11 secs
+2025-07-28 10:24:04,926 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:24:04,927 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:24:04,928 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:24:04,928 WARNING kafka.client: No node available during check_version; sleeping 0.17 secs
+2025-07-28 10:24:05,098 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:24:05,099 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:24:05,099 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:24:05,100 WARNING kafka.client: No node available during check_version; sleeping 0.48 secs
+2025-07-28 10:24:05,580 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:24:05,582 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:24:05,582 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:24:05,583 WARNING kafka.client: No node available during check_version; sleeping 0.69 secs
+2025-07-28 10:24:06,272 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:24:06,278 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:24:06,279 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:24:06,280 WARNING kafka.client: No node available during check_version; sleeping 0.48 secs
+2025-07-28 10:24:11,766 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:24:11,791 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+2025-07-28 10:24:11,792 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:24:11,795 INFO kafka.consumer.subscription_state: Updating subscribed topics to: ('logs',)
+2025-07-28 10:24:11,888 WARNING kafka.cluster: Topic logs is not available during auto-create initialization
+2025-07-28 10:24:11,890 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:24:11,891 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:24:11,891 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+2025-07-28 10:24:13,297 INFO kafka.cluster: Coordinator for group/log-viewer is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=9092, rack=None)
+2025-07-28 10:24:13,298 INFO kafka.coordinator: Discovered coordinator coordinator-1 for group log-viewer
+2025-07-28 10:24:13,298 INFO kafka.coordinator.heartbeat: Starting new heartbeat thread
+2025-07-28 10:24:13,299 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:24:13,299 INFO kafka.coordinator: Failed to join group log-viewer: NodeNotReadyError: coordinator-1
+2025-07-28 10:24:13,301 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:24:13,301 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:24:13,402 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:24:13,423 INFO kafka.coordinator: Received member id kafka-python-2.2.15-6fd5f266-7576-4c32-98a6-80d5bb719362 for group log-viewer; will retry join-group
+2025-07-28 10:24:13,424 INFO kafka.coordinator: Failed to join group log-viewer: [Error 79] MemberIdRequiredError
+2025-07-28 10:24:13,424 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:24:16,461 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 1 (member_id: kafka-python-2.2.15-6fd5f266-7576-4c32-98a6-80d5bb719362, protocol: range)>
+2025-07-28 10:24:16,461 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:24:16,462 WARNING kafka.coordinator.assignors.range: No partition metadata for topic logs
+2025-07-28 10:24:16,504 INFO kafka.consumer.subscription_state: Updated partition assignment: []
+2025-07-28 10:24:16,504 INFO kafka.coordinator.consumer: Setting newly assigned partitions set() for group log-viewer
+2025-07-28 10:24:19,507 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:24:19,513 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:24:19,518 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 2 (member_id: kafka-python-2.2.15-6fd5f266-7576-4c32-98a6-80d5bb719362, protocol: range)>
+2025-07-28 10:24:19,518 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:24:19,524 INFO kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='logs', partition=0)]
+2025-07-28 10:24:19,525 INFO kafka.coordinator.consumer: Setting newly assigned partitions {TopicPartition(topic='logs', partition=0)} for group log-viewer
+2025-07-28 10:24:19,558 INFO kafka.consumer.fetcher: Resetting offset for partition TopicPartition(topic='logs', partition=0) to offset 0.
+2025-07-28 10:24:23,646 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:24:23] "[33mGET /welcome HTTP/1.1[0m" 404 -
+2025-07-28 10:24:23,800 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:24:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 10:24:33,058 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:24:33] "[36mGET /mathSolve/welcome HTTP/1.1[0m" 304 -
+2025-07-28 10:24:35,902 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:24:35] "GET /mathSolve/login HTTP/1.1" 200 -
+2025-07-28 10:24:41,447 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:24:41,458 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+2025-07-28 10:24:41,459 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:24:41,563 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:24:41,565 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:24:41,567 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+2025-07-28 10:24:41,589 INFO root: Login attempt for daria.craciun411@gmail.com
+2025-07-28 10:24:41,595 ERROR main: Exception on /mathSolve/login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'mathdb.USERS' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/routes/auth_routes.py", line 18, in login_post
+    result = login_controller_instance.login(email, password)
+  File "/app/controller/login_controller.py", line 15, in login
+    user = user_model.get_user_by_email(self.cursor, email)
+  File "/app/model/user_model.py", line 3, in get_user_by_email
+    cursor.execute("SELECT * FROM USERS WHERE email = %s", (email,))
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/opentelemetry/context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'mathdb.USERS' doesn't exist
+2025-07-28 10:24:41,696 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:24:41] "[35m[1mPOST /mathSolve/login HTTP/1.1[0m" 500 -
+2025-07-28 10:27:13,087 INFO root: Login attempt for daria.craciun411@gmail.com
+2025-07-28 10:27:13,094 WARNING root: Login FAILED for daria.craciun411@gmail.com
+2025-07-28 10:27:13,097 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:27:13] "POST /mathSolve/login HTTP/1.1" 200 -
+2025-07-28 10:27:13,136 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:27:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 10:27:15,029 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:27:15] "GET /mathSolve/login HTTP/1.1" 200 -
+2025-07-28 10:27:16,203 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:27:16] "GET /mathSolve/register HTTP/1.1" 200 -
+2025-07-28 10:27:27,856 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:27:27] "[33mPOST /register HTTP/1.1[0m" 404 -
+2025-07-28 10:29:08,197 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:29:08] "[33mPOST /register HTTP/1.1[0m" 404 -
+2025-07-28 10:29:10,346 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:29:10] "GET /mathSolve/register HTTP/1.1" 200 -
+2025-07-28 10:29:10,378 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:29:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 10:29:20,869 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:29:20] "[33mPOST /mathSolve/mathSolve/register HTTP/1.1[0m" 404 -
+2025-07-28 10:30:39,648 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:30:39] "GET /mathSolve/register HTTP/1.1" 200 -
+2025-07-28 10:30:39,709 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:30:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 10:30:50,483 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:30:50] "POST /mathSolve/register HTTP/1.1" 200 -
+2025-07-28 10:30:54,470 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:30:54] "GET /mathSolve/register HTTP/1.1" 200 -
+2025-07-28 10:30:56,372 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:30:56] "[33mGET /mathSolve/mathSolve/login HTTP/1.1[0m" 404 -
+2025-07-28 10:31:17,352 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:31:17] "[33mGET /mathSolve/mathSolve/login HTTP/1.1[0m" 404 -
+2025-07-28 10:31:17,375 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:31:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 10:31:20,962 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:31:20] "[33mGET /mathSolve/mathSolve/login HTTP/1.1[0m" 404 -
+2025-07-28 10:31:46,248 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:31:46] "[33mGET /welcome HTTP/1.1[0m" 404 -
+2025-07-28 10:31:46,295 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:31:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 10:31:50,590 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:31:50] "[36mGET /mathSolve/welcome HTTP/1.1[0m" 304 -
+2025-07-28 10:31:52,169 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:31:52] "[36mGET /mathSolve/login HTTP/1.1[0m" 304 -
+2025-07-28 10:31:55,363 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:31:55] "GET /mathSolve/register HTTP/1.1" 200 -
+2025-07-28 10:31:56,738 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:31:56] "[36mGET /mathSolve/login HTTP/1.1[0m" 304 -
+2025-07-28 10:32:07,137 INFO root: Login attempt for daria.craciun411@gmail.com
+2025-07-28 10:32:07,254 INFO root: Login SUCCESS for daria.craciun411@gmail.com
+2025-07-28 10:32:07,258 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:32:07] "[32mPOST /mathSolve/login HTTP/1.1[0m" 302 -
+2025-07-28 10:32:07,334 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:32:07] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-28 10:32:13,384 INFO root: Se execută calculul power (NU din cache)
+2025-07-28 10:32:13,417 ERROR root: Error in power calculation
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Unknown column 'endpoint' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/controller/math_controller.py", line 28, in power
+    operation_model.insert_operation(self.db, self.cursor, 'power', input_data_json, formatted, user_id)
+  File "/app/model/operation_model.py", line 13, in insert_operation
+    cursor.execute(query, (endpoint, input_data, result, user_id))
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/opentelemetry/context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'endpoint' in 'field list'
+2025-07-28 10:32:13,484 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:32:13] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-28 10:37:30,042 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.6:5000
+2025-07-28 10:37:30,042 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-28 10:37:30,146 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:37:30,147 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:37:30,148 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:37:30,148 WARNING kafka.client: No node available during check_version; sleeping 0.16 secs
+2025-07-28 10:37:30,312 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:37:30,313 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:37:30,314 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:37:30,314 WARNING kafka.client: No node available during check_version; sleeping 0.39 secs
+2025-07-28 10:37:30,703 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:37:30,704 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:37:30,704 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:37:30,705 WARNING kafka.client: No node available during check_version; sleeping 0.92 secs
+2025-07-28 10:37:31,623 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:37:31,624 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:37:31,624 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:37:31,625 WARNING kafka.client: No node available during check_version; sleeping 0.37 secs
+2025-07-28 10:37:36,998 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:37:37,009 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+2025-07-28 10:37:37,010 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:37:37,010 INFO kafka.consumer.subscription_state: Updating subscribed topics to: ('logs',)
+2025-07-28 10:37:37,058 WARNING kafka.cluster: Topic logs is not available during auto-create initialization
+2025-07-28 10:37:37,060 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:37:37,061 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:37:37,061 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+2025-07-28 10:37:37,813 INFO kafka.cluster: Coordinator for group/log-viewer is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=9092, rack=None)
+2025-07-28 10:37:37,814 INFO kafka.coordinator: Discovered coordinator coordinator-1 for group log-viewer
+2025-07-28 10:37:37,814 INFO kafka.coordinator.heartbeat: Starting new heartbeat thread
+2025-07-28 10:37:37,815 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:37:37,815 INFO kafka.coordinator: Failed to join group log-viewer: NodeNotReadyError: coordinator-1
+2025-07-28 10:37:37,816 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:37:37,817 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:37:37,917 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:37:37,932 INFO kafka.coordinator: Received member id kafka-python-2.2.15-f6a1b2c5-277d-4d2a-a9c3-a027b0577f31 for group log-viewer; will retry join-group
+2025-07-28 10:37:37,932 INFO kafka.coordinator: Failed to join group log-viewer: [Error 79] MemberIdRequiredError
+2025-07-28 10:37:37,933 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:37:40,962 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 1 (member_id: kafka-python-2.2.15-f6a1b2c5-277d-4d2a-a9c3-a027b0577f31, protocol: range)>
+2025-07-28 10:37:40,962 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:37:40,963 WARNING kafka.coordinator.assignors.range: No partition metadata for topic logs
+2025-07-28 10:37:41,000 INFO kafka.consumer.subscription_state: Updated partition assignment: []
+2025-07-28 10:37:41,001 INFO kafka.coordinator.consumer: Setting newly assigned partitions set() for group log-viewer
+2025-07-28 10:37:44,000 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:37:44,005 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:37:44,009 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 2 (member_id: kafka-python-2.2.15-f6a1b2c5-277d-4d2a-a9c3-a027b0577f31, protocol: range)>
+2025-07-28 10:37:44,010 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:37:44,015 INFO kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='logs', partition=0)]
+2025-07-28 10:37:44,016 INFO kafka.coordinator.consumer: Setting newly assigned partitions {TopicPartition(topic='logs', partition=0)} for group log-viewer
+2025-07-28 10:37:44,034 INFO kafka.consumer.fetcher: Resetting offset for partition TopicPartition(topic='logs', partition=0) to offset 0.
+2025-07-28 10:38:17,965 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:38:17] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-28 10:38:20,372 INFO root: Se execută calculul power (NU din cache)
+2025-07-28 10:38:20,421 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:38:20] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-28 10:38:22,116 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:38:22] "POST /mathSolve/api/fibonacci HTTP/1.1" 200 -
+2025-07-28 10:38:23,394 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:38:23] "POST /mathSolve/api/factorial HTTP/1.1" 200 -
+2025-07-28 10:47:36,038 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: Socket EVENT_READ without in-flight-requests
+2025-07-28 10:47:36,039 WARNING kafka.client: Node coordinator-1 connection failed -- refreshing metadata
+2025-07-28 10:47:36,040 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: socket disconnected
+2025-07-28 10:47:36,041 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+2025-07-28 10:47:49,043 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.6:5000
+2025-07-28 10:47:49,043 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-28 10:47:49,126 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:47:49,127 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:47:49,127 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:47:49,128 WARNING kafka.client: No node available during check_version; sleeping 0.22 secs
+2025-07-28 10:47:49,345 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:47:49,346 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:47:49,346 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:47:49,347 WARNING kafka.client: No node available during check_version; sleeping 0.43 secs
+2025-07-28 10:47:49,780 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:47:49,781 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:47:49,782 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:47:49,782 WARNING kafka.client: No node available during check_version; sleeping 0.70 secs
+2025-07-28 10:47:50,480 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:47:50,481 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:47:50,482 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:47:50,482 WARNING kafka.client: No node available during check_version; sleeping 0.51 secs
+2025-07-28 10:47:55,996 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:47:56,010 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+2025-07-28 10:47:56,010 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:47:56,011 INFO kafka.consumer.subscription_state: Updating subscribed topics to: ('logs',)
+2025-07-28 10:47:56,069 WARNING kafka.cluster: Topic logs is not available during auto-create initialization
+2025-07-28 10:47:56,071 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:47:56,072 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:47:56,072 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+2025-07-28 10:47:57,067 INFO kafka.cluster: Coordinator for group/log-viewer is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=9092, rack=None)
+2025-07-28 10:47:57,067 INFO kafka.coordinator: Discovered coordinator coordinator-1 for group log-viewer
+2025-07-28 10:47:57,068 INFO kafka.coordinator.heartbeat: Starting new heartbeat thread
+2025-07-28 10:47:57,068 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:47:57,069 INFO kafka.coordinator: Failed to join group log-viewer: NodeNotReadyError: coordinator-1
+2025-07-28 10:47:57,081 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:47:57,082 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:47:57,183 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:47:57,217 INFO kafka.coordinator: Received member id kafka-python-2.2.15-a48c5c99-56ed-4942-86e6-53d917eee938 for group log-viewer; will retry join-group
+2025-07-28 10:47:57,218 INFO kafka.coordinator: Failed to join group log-viewer: [Error 79] MemberIdRequiredError
+2025-07-28 10:47:57,218 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:47:59,063 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:47:59] "[32mGET /mathSolve/login HTTP/1.1[0m" 302 -
+2025-07-28 10:48:00,264 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 1 (member_id: kafka-python-2.2.15-a48c5c99-56ed-4942-86e6-53d917eee938, protocol: range)>
+2025-07-28 10:48:00,265 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:48:00,265 WARNING kafka.coordinator.assignors.range: No partition metadata for topic logs
+2025-07-28 10:48:00,331 INFO kafka.consumer.subscription_state: Updated partition assignment: []
+2025-07-28 10:48:00,332 INFO kafka.coordinator.consumer: Setting newly assigned partitions set() for group log-viewer
+2025-07-28 10:48:02,158 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:48:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-28 10:48:03,336 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:48:03,345 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:48:03,356 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 2 (member_id: kafka-python-2.2.15-a48c5c99-56ed-4942-86e6-53d917eee938, protocol: range)>
+2025-07-28 10:48:03,357 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:48:03,376 INFO kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='logs', partition=0)]
+2025-07-28 10:48:03,377 INFO kafka.coordinator.consumer: Setting newly assigned partitions {TopicPartition(topic='logs', partition=0)} for group log-viewer
+2025-07-28 10:48:03,438 INFO kafka.consumer.fetcher: Resetting offset for partition TopicPartition(topic='logs', partition=0) to offset 0.
+2025-07-28 10:48:09,008 ERROR main: Exception on /mathSolve/calculator [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/utils/auth_utils.py", line 11, in decorated_function
+    return redirect(url_for('login'))
+  File "/usr/local/lib/python3.10/site-packages/flask/helpers.py", line 232, in url_for
+    return current_app.url_for(
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/usr/local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth_bp.login' instead?
+2025-07-28 10:48:09,042 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:48:09] "[35m[1mGET /mathSolve/calculator HTTP/1.1[0m" 500 -
+2025-07-28 10:48:09,091 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:48:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-28 10:48:13,134 ERROR main: Exception on /mathSolve/calculator [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/utils/auth_utils.py", line 11, in decorated_function
+    return redirect(url_for('login'))
+  File "/usr/local/lib/python3.10/site-packages/flask/helpers.py", line 232, in url_for
+    return current_app.url_for(
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/usr/local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth_bp.login' instead?
+2025-07-28 10:48:13,136 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:48:13] "[35m[1mGET /mathSolve/calculator HTTP/1.1[0m" 500 -
+2025-07-28 10:48:33,083 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:48:33] "[31m[1mPOST /mathSolve/register HTTP/1.1[0m" 400 -
+2025-07-28 10:50:02,570 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.6:5000
+2025-07-28 10:50:02,571 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-28 10:50:02,575 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:50:02,575 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:50:02,576 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:50:02,576 WARNING kafka.client: No node available during check_version; sleeping 0.11 secs
+2025-07-28 10:50:02,688 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:50:02,689 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:50:02,690 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:50:02,690 WARNING kafka.client: No node available during check_version; sleeping 0.21 secs
+2025-07-28 10:50:02,902 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:50:02,902 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:50:02,903 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:50:02,903 WARNING kafka.client: No node available during check_version; sleeping 0.37 secs
+2025-07-28 10:50:03,277 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:50:03,278 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:50:03,278 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:50:03,278 WARNING kafka.client: No node available during check_version; sleeping 0.72 secs
+2025-07-28 10:50:03,999 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:50:04,063 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+2025-07-28 10:50:04,064 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:50:04,065 INFO kafka.consumer.subscription_state: Updating subscribed topics to: ('logs',)
+2025-07-28 10:50:04,119 WARNING kafka.cluster: Topic logs is not available during auto-create initialization
+2025-07-28 10:50:04,123 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:50:04,123 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:50:04,124 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+2025-07-28 10:50:04,880 INFO kafka.cluster: Coordinator for group/log-viewer is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=9092, rack=None)
+2025-07-28 10:50:04,881 INFO kafka.coordinator: Discovered coordinator coordinator-1 for group log-viewer
+2025-07-28 10:50:04,883 INFO kafka.coordinator.heartbeat: Starting new heartbeat thread
+2025-07-28 10:50:04,883 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:50:04,884 INFO kafka.coordinator: Failed to join group log-viewer: NodeNotReadyError: coordinator-1
+2025-07-28 10:50:04,885 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:50:04,885 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:50:04,986 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:50:05,005 INFO kafka.coordinator: Received member id kafka-python-2.2.15-b174a9c8-2f00-45f6-9bac-c252ea3c107a for group log-viewer; will retry join-group
+2025-07-28 10:50:05,006 INFO kafka.coordinator: Failed to join group log-viewer: [Error 79] MemberIdRequiredError
+2025-07-28 10:50:05,007 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:50:08,043 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 1 (member_id: kafka-python-2.2.15-b174a9c8-2f00-45f6-9bac-c252ea3c107a, protocol: range)>
+2025-07-28 10:50:08,045 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:50:08,046 WARNING kafka.coordinator.assignors.range: No partition metadata for topic logs
+2025-07-28 10:50:08,104 INFO kafka.consumer.subscription_state: Updated partition assignment: []
+2025-07-28 10:50:08,105 INFO kafka.coordinator.consumer: Setting newly assigned partitions set() for group log-viewer
+2025-07-28 10:50:11,107 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:50:11,112 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:50:11,115 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 2 (member_id: kafka-python-2.2.15-b174a9c8-2f00-45f6-9bac-c252ea3c107a, protocol: range)>
+2025-07-28 10:50:11,116 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:50:11,120 INFO kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='logs', partition=0)]
+2025-07-28 10:50:11,121 INFO kafka.coordinator.consumer: Setting newly assigned partitions {TopicPartition(topic='logs', partition=0)} for group log-viewer
+2025-07-28 10:50:11,137 INFO kafka.consumer.fetcher: Resetting offset for partition TopicPartition(topic='logs', partition=0) to offset 0.
+2025-07-28 10:50:23,734 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:50:23] "[31m[1mPOST /mathSolve/register HTTP/1.1[0m" 400 -
+2025-07-28 10:51:32,909 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.6:5000
+2025-07-28 10:51:32,910 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-28 10:51:32,917 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:51:32,918 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:51:32,919 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:51:32,919 WARNING kafka.client: No node available during check_version; sleeping 0.11 secs
+2025-07-28 10:51:33,035 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:51:33,036 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:51:33,037 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:51:33,037 WARNING kafka.client: No node available during check_version; sleeping 0.23 secs
+2025-07-28 10:51:33,273 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:51:33,274 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:51:33,274 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:51:33,275 WARNING kafka.client: No node available during check_version; sleeping 0.46 secs
+2025-07-28 10:51:33,738 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:51:33,739 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:51:33,740 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:51:33,740 WARNING kafka.client: No node available during check_version; sleeping 0.70 secs
+2025-07-28 10:51:34,441 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:51:34,442 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:51:34,446 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:51:34,446 WARNING kafka.client: No node available during check_version; sleeping 0.42 secs
+2025-07-28 10:51:39,872 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:51:39,885 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+2025-07-28 10:51:39,885 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:51:39,887 INFO kafka.consumer.subscription_state: Updating subscribed topics to: ('logs',)
+2025-07-28 10:51:39,930 WARNING kafka.cluster: Topic logs is not available during auto-create initialization
+2025-07-28 10:51:39,932 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:51:39,933 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:51:39,933 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+2025-07-28 10:51:41,028 INFO kafka.cluster: Coordinator for group/log-viewer is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=9092, rack=None)
+2025-07-28 10:51:41,029 INFO kafka.coordinator: Discovered coordinator coordinator-1 for group log-viewer
+2025-07-28 10:51:41,029 INFO kafka.coordinator.heartbeat: Starting new heartbeat thread
+2025-07-28 10:51:41,031 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:51:41,032 INFO kafka.coordinator: Failed to join group log-viewer: NodeNotReadyError: coordinator-1
+2025-07-28 10:51:41,033 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:51:41,033 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:51:41,134 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:51:41,148 INFO kafka.coordinator: Received member id kafka-python-2.2.15-7307a848-a9dd-467b-b629-41afc1fdb0ad for group log-viewer; will retry join-group
+2025-07-28 10:51:41,148 INFO kafka.coordinator: Failed to join group log-viewer: [Error 79] MemberIdRequiredError
+2025-07-28 10:51:41,149 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:51:42,451 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:51:42] "GET /mathSolve/register HTTP/1.1" 200 -
+2025-07-28 10:51:42,478 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:51:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 10:51:44,169 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 1 (member_id: kafka-python-2.2.15-7307a848-a9dd-467b-b629-41afc1fdb0ad, protocol: range)>
+2025-07-28 10:51:44,169 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:51:44,170 WARNING kafka.coordinator.assignors.range: No partition metadata for topic logs
+2025-07-28 10:51:44,220 INFO kafka.consumer.subscription_state: Updated partition assignment: []
+2025-07-28 10:51:44,220 INFO kafka.coordinator.consumer: Setting newly assigned partitions set() for group log-viewer
+2025-07-28 10:51:47,224 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:51:47,230 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:51:47,235 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 2 (member_id: kafka-python-2.2.15-7307a848-a9dd-467b-b629-41afc1fdb0ad, protocol: range)>
+2025-07-28 10:51:47,235 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:51:47,244 INFO kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='logs', partition=0)]
+2025-07-28 10:51:47,245 INFO kafka.coordinator.consumer: Setting newly assigned partitions {TopicPartition(topic='logs', partition=0)} for group log-viewer
+2025-07-28 10:51:47,268 INFO kafka.consumer.fetcher: Resetting offset for partition TopicPartition(topic='logs', partition=0) to offset 0.
+2025-07-28 10:51:54,133 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:51:54] "[31m[1mPOST /mathSolve/register HTTP/1.1[0m" 400 -
+2025-07-28 10:51:55,821 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:51:55] "[31m[1mPOST /mathSolve/register HTTP/1.1[0m" 400 -
+2025-07-28 10:51:56,448 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:51:56] "[31m[1mPOST /mathSolve/register HTTP/1.1[0m" 400 -
+2025-07-28 10:51:56,628 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:51:56] "[31m[1mPOST /mathSolve/register HTTP/1.1[0m" 400 -
+2025-07-28 10:51:56,804 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:51:56] "[31m[1mPOST /mathSolve/register HTTP/1.1[0m" 400 -
+2025-07-28 10:52:15,593 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:52:15] "POST /mathSolve/register HTTP/1.1" 200 -
+2025-07-28 10:52:20,331 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:52:20] "GET /mathSolve/login HTTP/1.1" 200 -
+2025-07-28 10:54:46,793 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: Socket EVENT_READ without in-flight-requests
+2025-07-28 10:54:56,657 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.6:5000
+2025-07-28 10:54:56,658 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-28 10:54:56,748 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:54:56,748 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:54:56,749 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:54:56,749 WARNING kafka.client: No node available during check_version; sleeping 0.21 secs
+2025-07-28 10:54:56,963 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:54:56,965 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:54:56,966 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:54:56,967 WARNING kafka.client: No node available during check_version; sleeping 0.37 secs
+2025-07-28 10:54:57,336 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:54:57,337 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:54:57,338 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:54:57,346 WARNING kafka.client: No node available during check_version; sleeping 0.92 secs
+2025-07-28 10:54:58,272 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:54:58,286 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+2025-07-28 10:54:58,286 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:54:58,287 INFO kafka.consumer.subscription_state: Updating subscribed topics to: ('logs',)
+2025-07-28 10:54:58,342 WARNING kafka.cluster: Topic logs is not available during auto-create initialization
+2025-07-28 10:54:58,344 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:54:58,344 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:54:58,344 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+2025-07-28 10:54:59,220 INFO kafka.cluster: Coordinator for group/log-viewer is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=9092, rack=None)
+2025-07-28 10:54:59,221 INFO kafka.coordinator: Discovered coordinator coordinator-1 for group log-viewer
+2025-07-28 10:54:59,222 INFO kafka.coordinator.heartbeat: Starting new heartbeat thread
+2025-07-28 10:54:59,224 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:54:59,226 INFO kafka.coordinator: Failed to join group log-viewer: NodeNotReadyError: coordinator-1
+2025-07-28 10:54:59,230 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:54:59,233 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:54:59,335 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:54:59,355 INFO kafka.coordinator: Received member id kafka-python-2.2.15-f9f0a908-f711-45e2-85a6-1c253e83cb6d for group log-viewer; will retry join-group
+2025-07-28 10:54:59,355 INFO kafka.coordinator: Failed to join group log-viewer: [Error 79] MemberIdRequiredError
+2025-07-28 10:54:59,356 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:55:02,378 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 1 (member_id: kafka-python-2.2.15-f9f0a908-f711-45e2-85a6-1c253e83cb6d, protocol: range)>
+2025-07-28 10:55:02,378 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:55:02,379 WARNING kafka.coordinator.assignors.range: No partition metadata for topic logs
+2025-07-28 10:55:02,432 INFO kafka.consumer.subscription_state: Updated partition assignment: []
+2025-07-28 10:55:02,432 INFO kafka.coordinator.consumer: Setting newly assigned partitions set() for group log-viewer
+2025-07-28 10:55:05,439 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:55:05,457 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:55:05,478 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 2 (member_id: kafka-python-2.2.15-f9f0a908-f711-45e2-85a6-1c253e83cb6d, protocol: range)>
+2025-07-28 10:55:05,486 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:55:05,505 INFO kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='logs', partition=0)]
+2025-07-28 10:55:05,507 INFO kafka.coordinator.consumer: Setting newly assigned partitions {TopicPartition(topic='logs', partition=0)} for group log-viewer
+2025-07-28 10:55:05,558 INFO kafka.consumer.fetcher: Resetting offset for partition TopicPartition(topic='logs', partition=0) to offset 0.
+2025-07-28 10:55:17,831 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:55:17,836 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+2025-07-28 10:55:17,836 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:55:17,941 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:55:17,943 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:55:17,944 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+2025-07-28 10:55:17,958 INFO root: Login attempt for daria.craciun@endava.com
+2025-07-28 10:55:17,981 WARNING root: Login FAILED for daria.craciun@endava.com
+2025-07-28 10:55:17,985 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:55:17] "[31m[1mPOST /mathSolve/login HTTP/1.1[0m" 400 -
+2025-07-28 10:56:23,763 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.6:5000
+2025-07-28 10:56:23,764 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-28 10:56:23,780 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:56:23,781 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:56:23,781 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:56:23,782 WARNING kafka.client: No node available during check_version; sleeping 0.08 secs
+2025-07-28 10:56:23,863 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:56:23,864 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:56:23,865 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:56:23,866 WARNING kafka.client: No node available during check_version; sleeping 0.16 secs
+2025-07-28 10:56:24,025 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:56:24,025 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:56:24,026 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:56:24,026 WARNING kafka.client: No node available during check_version; sleeping 0.38 secs
+2025-07-28 10:56:24,404 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:56:24,404 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 10:56:24,405 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 10:56:24,405 WARNING kafka.client: No node available during check_version; sleeping 0.71 secs
+2025-07-28 10:56:25,119 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:56:25,130 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+2025-07-28 10:56:25,131 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:56:25,131 INFO kafka.consumer.subscription_state: Updating subscribed topics to: ('logs',)
+2025-07-28 10:56:25,193 WARNING kafka.cluster: Topic logs is not available during auto-create initialization
+2025-07-28 10:56:25,195 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:56:25,196 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:56:25,197 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+2025-07-28 10:56:26,073 INFO kafka.cluster: Coordinator for group/log-viewer is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=9092, rack=None)
+2025-07-28 10:56:26,074 INFO kafka.coordinator: Discovered coordinator coordinator-1 for group log-viewer
+2025-07-28 10:56:26,075 INFO kafka.coordinator.heartbeat: Starting new heartbeat thread
+2025-07-28 10:56:26,075 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:56:26,076 INFO kafka.coordinator: Failed to join group log-viewer: NodeNotReadyError: coordinator-1
+2025-07-28 10:56:26,077 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:56:26,077 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:56:26,178 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:56:26,193 INFO kafka.coordinator: Received member id kafka-python-2.2.15-ac46f408-bb0b-4d69-8308-774dbf4b7baa for group log-viewer; will retry join-group
+2025-07-28 10:56:26,194 INFO kafka.coordinator: Failed to join group log-viewer: [Error 79] MemberIdRequiredError
+2025-07-28 10:56:26,195 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:56:29,214 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 1 (member_id: kafka-python-2.2.15-ac46f408-bb0b-4d69-8308-774dbf4b7baa, protocol: range)>
+2025-07-28 10:56:29,215 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:56:29,216 WARNING kafka.coordinator.assignors.range: No partition metadata for topic logs
+2025-07-28 10:56:29,256 INFO kafka.consumer.subscription_state: Updated partition assignment: []
+2025-07-28 10:56:29,258 INFO kafka.coordinator.consumer: Setting newly assigned partitions set() for group log-viewer
+2025-07-28 10:56:32,256 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 10:56:32,264 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 10:56:32,269 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 2 (member_id: kafka-python-2.2.15-ac46f408-bb0b-4d69-8308-774dbf4b7baa, protocol: range)>
+2025-07-28 10:56:32,270 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 10:56:32,275 INFO kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='logs', partition=0)]
+2025-07-28 10:56:32,275 INFO kafka.coordinator.consumer: Setting newly assigned partitions {TopicPartition(topic='logs', partition=0)} for group log-viewer
+2025-07-28 10:56:32,303 INFO kafka.consumer.fetcher: Resetting offset for partition TopicPartition(topic='logs', partition=0) to offset 0.
+2025-07-28 10:56:32,980 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:56:32] "[36mGET /mathSolve/welcome HTTP/1.1[0m" 304 -
+2025-07-28 10:56:33,970 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:56:33] "GET /mathSolve/login HTTP/1.1" 200 -
+2025-07-28 10:56:38,245 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:56:38,252 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+2025-07-28 10:56:38,252 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:56:38,362 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+2025-07-28 10:56:38,363 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+2025-07-28 10:56:38,364 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+2025-07-28 10:56:38,384 INFO root: Login attempt for daria.craciun@endava.com
+2025-07-28 10:56:38,402 WARNING root: Login FAILED for daria.craciun@endava.com
+2025-07-28 10:56:38,410 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:56:38] "[31m[1mPOST /mathSolve/login HTTP/1.1[0m" 400 -
+2025-07-28 10:56:39,841 INFO root: Login attempt for daria.craciun@endava.com
+2025-07-28 10:56:39,844 WARNING root: Login FAILED for daria.craciun@endava.com
+2025-07-28 10:56:39,850 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:56:39] "[31m[1mPOST /mathSolve/login HTTP/1.1[0m" 400 -
+2025-07-28 10:56:48,310 INFO root: Login attempt for daria.craciun411@gmail.com
+2025-07-28 10:56:48,422 INFO root: Login SUCCESS for daria.craciun411@gmail.com
+2025-07-28 10:56:48,426 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:56:48] "POST /mathSolve/login HTTP/1.1" 200 -
+2025-07-28 10:56:50,772 INFO root: Login attempt for daria.craciun411@gmail.com
+2025-07-28 10:56:50,878 INFO root: Login SUCCESS for daria.craciun411@gmail.com
+2025-07-28 10:56:50,885 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:56:50] "POST /mathSolve/login HTTP/1.1" 200 -
+2025-07-28 10:56:52,453 INFO root: Login attempt for daria.craciun411@gmail.com
+2025-07-28 10:56:52,566 INFO root: Login SUCCESS for daria.craciun411@gmail.com
+2025-07-28 10:56:52,570 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:56:52] "POST /mathSolve/login HTTP/1.1" 200 -
+2025-07-28 10:57:50,159 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:57:50] "[32mGET /mathSolve/login HTTP/1.1[0m" 302 -
+2025-07-28 10:57:50,220 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:57:50] "GET /mathSolve/calculator HTTP/1.1" 200 -
+2025-07-28 10:57:50,265 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:57:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 10:57:53,558 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:57:53] "[32mGET /mathSolve/login HTTP/1.1[0m" 302 -
+2025-07-28 10:57:53,571 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:57:53] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-28 10:57:59,418 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:57:59] "POST /mathSolve/api/factorial HTTP/1.1" 200 -
+2025-07-28 10:57:59,881 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:57:59] "POST /mathSolve/api/fibonacci HTTP/1.1" 200 -
+2025-07-28 10:58:00,498 INFO root: Se execută calculul power (NU din cache)
+2025-07-28 10:58:00,542 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 10:58:00] "POST /mathSolve/api/power HTTP/1.1" 200 -
