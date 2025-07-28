@@ -15,6 +15,7 @@ This project is a modular web application built with Flask, offering mathematica
 - Pydantic (request validation)
 - Werkzeug (password hashing)
 - JWT (PyJWT)
+- Flake 8
 
 ## Project Structure
 ```
