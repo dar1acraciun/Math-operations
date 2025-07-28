@@ -1894,3 +1894,191 @@ TypeError: check_password() takes 2 positional arguments but 3 were given
 2025-07-28 11:58:10,754 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 11:58:10] "POST /mathSolve/api/factorial HTTP/1.1" 200 -
 2025-07-28 11:58:13,452 INFO root: Se execută calculul power (NU din cache)
 2025-07-28 11:58:13,463 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 11:58:13] "POST /mathSolve/api/power HTTP/1.1" 200 -
+2025-07-28 12:08:16,541 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.7:5000
+2025-07-28 12:08:16,541 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-28 12:08:16,554 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:08:16,556 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 12:08:16,556 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 12:08:16,557 WARNING kafka.client: No node available during check_version; sleeping 0.09 secs
+2025-07-28 12:08:16,650 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:08:16,651 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 12:08:16,652 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 12:08:16,652 WARNING kafka.client: No node available during check_version; sleeping 0.16 secs
+2025-07-28 12:08:16,814 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:08:16,817 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 12:08:16,818 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 12:08:16,819 WARNING kafka.client: No node available during check_version; sleeping 0.39 secs
+2025-07-28 12:08:17,214 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:08:17,215 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 12:08:17,215 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 12:08:17,216 WARNING kafka.client: No node available during check_version; sleeping 0.66 secs
+2025-07-28 12:08:17,880 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:08:17,881 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 12:08:17,881 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 12:08:17,881 WARNING kafka.client: No node available during check_version; sleeping 0.61 secs
+2025-07-28 12:08:26,296 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:08:26,297 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:08:26,297 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:08:31,433 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 12:08:31] "[32mGET /mathSolve/login HTTP/1.1[0m" 302 -
+2025-07-28 12:08:31,445 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 12:08:31] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -
+2025-07-28 12:08:34,104 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:08:34,104 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:08:34,104 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:08:35,686 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 12:08:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-28 12:08:41,873 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:08:41,874 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:08:41,874 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:08:45,602 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 12:08:45] "GET /mathSolve/login HTTP/1.1" 200 -
+2025-07-28 12:08:49,644 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:08:49,646 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:08:49,647 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:08:57,471 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:08:57,473 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:08:57,473 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:09:05,268 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:09:05,269 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:09:05,269 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:09:09,190 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 12:09:09] "GET /mathSolve/register HTTP/1.1" 200 -
+2025-07-28 12:09:13,057 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:09:13,061 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:09:13,061 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:09:20,887 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:09:20,888 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:09:20,889 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:09:28,678 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:09:28,678 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:09:28,679 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:09:36,448 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:09:36,448 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:09:36,449 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:09:44,270 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:09:44,270 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:09:44,271 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:09:52,072 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:09:52,073 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:09:52,074 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:09:59,859 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:09:59,860 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:09:59,860 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:10:07,643 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:10:07,646 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:10:07,646 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:10:15,433 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:10:15,434 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:10:15,435 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:10:23,235 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:10:23,235 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:10:23,237 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:10:31,038 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:10:31,039 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:10:31,040 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:10:34,873 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:10:34,874 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:10:34,875 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:10:34,876 ERROR main: Exception on /mathSolve/login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/routes/auth_routes.py", line 29, in login_post
+    result = login_controller_instance.login(email, password)
+  File "/app/controller/login_controller.py", line 16, in login
+    send_log("Login attempt", user=email, route="/mathSolve/api/login")
+  File "/app/utils/kafka_logger.py", line 20, in send_log
+    producer = get_producer()
+  File "/app/utils/kafka_logger.py", line 11, in get_producer
+    _producer = KafkaProducer(
+  File "/usr/local/lib/python3.10/site-packages/kafka/producer/kafka.py", line 481, in __init__
+    client = self.config['kafka_client'](
+  File "/usr/local/lib/python3.10/site-packages/kafka/client_async.py", line 262, in __init__
+    self.config['api_version'] = self.check_version()
+  File "/usr/local/lib/python3.10/site-packages/kafka/client_async.py", line 1074, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+2025-07-28 12:10:34,907 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 12:10:34] "[35m[1mPOST /mathSolve/login HTTP/1.1[0m" 500 -
+2025-07-28 12:10:38,407 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:10:38,408 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:10:38,408 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:10:46,184 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:10:46,184 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:10:46,185 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:10:53,968 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:10:53,969 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:10:53,970 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:11:01,761 WARNING kafka.conn: DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-07-28 12:11:01,761 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-07-28 12:11:01,762 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+2025-07-28 12:12:00,571 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:12:00,572 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 12:12:00,572 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 12:12:00,573 WARNING kafka.client: No node available during check_version; sleeping 0.09 secs
+2025-07-28 12:12:00,574 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.7:5000
+2025-07-28 12:12:00,575 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-07-28 12:12:00,670 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:12:00,671 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 12:12:00,671 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 12:12:00,672 WARNING kafka.client: No node available during check_version; sleeping 0.20 secs
+2025-07-28 12:12:00,877 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:12:00,878 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 12:12:00,878 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 12:12:00,879 WARNING kafka.client: No node available during check_version; sleeping 0.46 secs
+2025-07-28 12:12:01,345 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:12:01,346 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 12:12:01,347 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 12:12:01,348 WARNING kafka.client: No node available during check_version; sleeping 0.91 secs
+2025-07-28 12:12:02,256 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:12:02,257 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+2025-07-28 12:12:02,258 ERROR kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+2025-07-28 12:12:02,258 WARNING kafka.client: No node available during check_version; sleeping 0.26 secs
+2025-07-28 12:12:07,524 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:12:07,536 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+2025-07-28 12:12:07,537 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+2025-07-28 12:12:07,538 INFO kafka.consumer.subscription_state: Updating subscribed topics to: ('logs',)
+2025-07-28 12:12:07,595 WARNING kafka.cluster: Topic logs is not available during auto-create initialization
+2025-07-28 12:12:07,597 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:12:07,598 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+2025-07-28 12:12:07,599 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+2025-07-28 12:12:08,467 INFO kafka.cluster: Coordinator for group/log-viewer is BrokerMetadata(nodeId='coordinator-1', host='kafka', port=9092, rack=None)
+2025-07-28 12:12:08,467 INFO kafka.coordinator: Discovered coordinator coordinator-1 for group log-viewer
+2025-07-28 12:12:08,467 INFO kafka.coordinator.heartbeat: Starting new heartbeat thread
+2025-07-28 12:12:08,468 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 12:12:08,468 INFO kafka.coordinator: Failed to join group log-viewer: NodeNotReadyError: coordinator-1
+2025-07-28 12:12:08,469 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:12:08,470 INFO kafka.conn: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+2025-07-28 12:12:08,571 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 12:12:08,585 INFO kafka.coordinator: Received member id kafka-python-2.2.15-a3e5535d-452e-4086-8d8a-45020f85e6fc for group log-viewer; will retry join-group
+2025-07-28 12:12:08,585 INFO kafka.coordinator: Failed to join group log-viewer: [Error 79] MemberIdRequiredError
+2025-07-28 12:12:08,586 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 12:12:11,617 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 1 (member_id: kafka-python-2.2.15-a3e5535d-452e-4086-8d8a-45020f85e6fc, protocol: range)>
+2025-07-28 12:12:11,618 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 12:12:11,618 WARNING kafka.coordinator.assignors.range: No partition metadata for topic logs
+2025-07-28 12:12:11,664 INFO kafka.consumer.subscription_state: Updated partition assignment: []
+2025-07-28 12:12:11,664 INFO kafka.coordinator.consumer: Setting newly assigned partitions set() for group log-viewer
+2025-07-28 12:12:14,666 INFO kafka.coordinator.consumer: Revoking previously assigned partitions set() for group log-viewer
+2025-07-28 12:12:14,672 INFO kafka.coordinator: (Re-)joining group log-viewer
+2025-07-28 12:12:14,676 INFO kafka.coordinator: Successfully joined group log-viewer <Generation 2 (member_id: kafka-python-2.2.15-a3e5535d-452e-4086-8d8a-45020f85e6fc, protocol: range)>
+2025-07-28 12:12:14,676 INFO kafka.coordinator: Elected group leader -- performing partition assignments using range
+2025-07-28 12:12:14,680 INFO kafka.consumer.subscription_state: Updated partition assignment: [TopicPartition(topic='logs', partition=0)]
+2025-07-28 12:12:14,681 INFO kafka.coordinator.consumer: Setting newly assigned partitions {TopicPartition(topic='logs', partition=0)} for group log-viewer
+2025-07-28 12:12:14,699 INFO kafka.consumer.fetcher: Resetting offset for partition TopicPartition(topic='logs', partition=0) to offset 0.
+2025-07-28 12:12:33,148 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:12:33,158 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+2025-07-28 12:12:33,158 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+2025-07-28 12:12:33,262 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+2025-07-28 12:12:33,263 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+2025-07-28 12:12:33,264 INFO kafka.conn: <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+2025-07-28 12:12:33,286 INFO root: Login attempt for daria.craciun411@gmail.com
+2025-07-28 12:12:33,445 INFO root: Login SUCCESS for daria.craciun411@gmail.com
+2025-07-28 12:12:33,448 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 12:12:33] "POST /mathSolve/login HTTP/1.1" 200 -
+2025-07-28 12:12:34,294 INFO werkzeug: 192.168.143.2 - - [28/Jul/2025 12:12:34] "[36mGET /mathSolve/calculator HTTP/1.1[0m" 304 -

@@ -67,5 +67,18 @@ Dockerfile            # Backend image build
 - For local development without Docker, install dependencies with `pip install -r requirements.txt` and start the required services (MySQL, Redis, Kafka) manually.
 - The code is PEP8/flake8 compliant.
 
+## Screenshots
+
+Below are some screenshots of the application in action:
+- Welcome Page
+  ![alt text](image-1.png)
+- Login Page:
+  ![alt text](image.png)
+- Registration Page:
+  ![alt text](image-2.png)
+- Calculator Page:
+  ![alt text](image-3.png)
+
+
 ## Authors
 - [Your Name]
