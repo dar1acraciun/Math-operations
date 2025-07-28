@@ -81,4 +81,4 @@ Below are some screenshots of the application in action:
 
 
 ## Authors
-- [Your Name]
+-  Daria Craciun
