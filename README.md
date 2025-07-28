@@ -71,13 +71,13 @@ Dockerfile            # Backend image build
 
 Below are some screenshots of the application in action:
 - Welcome Page
-  ![alt text](image-1.png)
+  ![Welcome Page](screenshots/image-1.png)
 - Login Page:
-  ![alt text](image.png)
+  ![Login Page](screenshots/image.png)
 - Registration Page:
-  ![alt text](image-2.png)
+  ![Registration Page](screenshots/image-2.png)
 - Calculator Page:
-  ![alt text](image-3.png)
+  ![Calculator Page](screenshots/image-3.png)
 
 
 ## Authors
