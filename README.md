@@ -68,4 +68,4 @@ Dockerfile            # Backend image build
 - The code is PEP8/flake8 compliant.
 
 ## Authors
-- [Your Name]
+-  Daria Craciun
