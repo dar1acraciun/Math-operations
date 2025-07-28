@@ -1,5 +1,3 @@
-
-
 def get_user_by_email(cursor, email):
     cursor.execute("SELECT * FROM USERS WHERE email = %s", (email,))
     return cursor.fetchone() or None

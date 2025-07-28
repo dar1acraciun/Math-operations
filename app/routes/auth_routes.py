@@ -96,6 +96,9 @@ def register_post():
     password = request.form.get('password')
     conf_password = request.form.get('conf_password')
     register_controller_instance = register_controller.RegisterController()
+    from utils.matrics_utils import registration_counter, endpoint_response_time
+    import time
+    start = time.time()
     result = register_controller_instance.register(
         first_name,
         last_name,
@@ -103,6 +106,10 @@ def register_post():
         password,
         conf_password
     )
+    duration = time.time() - start
+    endpoint_response_time.labels(endpoint='/register').observe(duration)
+    if "success" in result:
+        registration_counter.inc()
     # Dacă e AJAX (fetch), răspunde cu JSON
     is_ajax = (
         request.headers.get('X-Requested-With') == 'XMLHttpRequest' or

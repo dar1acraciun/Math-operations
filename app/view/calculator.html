@@ -10,6 +10,82 @@
             padding: 0;
             box-sizing: border-box;
         }
+         .history-card {
+            grid-column: 1 / -1;
+            max-width: 100%;
+        }
+
+        .history-content {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .history-item {
+            background: rgba(102, 126, 234, 0.05);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .history-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .history-operation {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .history-result {
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .history-time {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-size: 0.8rem;
+            color: #666;
+            opacity: 0.7;
+        }
+
+        .clear-history {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .clear-history:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .empty-history {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 12px;
+            border: 2px dashed rgba(102, 126, 234, 0.2);
+        }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -318,7 +394,18 @@
 
     <!-- Calculator Grid -->
     <div class="calculator-grid">
-        
+        <div class="calculator-card history-card">
+            <h2 class="calculator-title">📊 Istoric Calcule</h2>
+            <div class="history-content" id="historyContent">
+                <div class="empty-history">
+                    <p>Nu există calcule în istoric încă...</p>
+                    <p>Efectuează primul tău calcul pentru a vedea istoricul aici!</p>
+                </div>
+            </div>
+            <button class="clear-history" onclick="clearHistory()" style="display: none;" id="clearHistoryBtn">
+                🗑️ Șterge Istoricul
+            </button>
+        </div>
         <!-- Power Calculator -->
         <div class="calculator-card">
             <h2 class="calculator-title">Calculator Putere (a^b)</h2>
@@ -455,6 +542,36 @@
             }
             resultDiv.classList.remove('loading');
         });
+
+        async function fetchHistory() {
+            const historyContent = document.getElementById('historyContent');
+            try {
+                const response = await fetch('/mathSolve/api/history');
+                const data = await response.json();
+                if (data.success && data.history && data.history.length > 0) {
+                    historyContent.innerHTML = '';
+                    data.history.forEach(item => {
+                        const div = document.createElement('div');
+                        div.className = 'history-item';
+                        div.innerHTML = `
+                            <div class="history-operation">${item.operation}</div>
+                            <div class="history-result">${item.result}</div>
+                            <div class="history-time">${item.time || ''}</div>
+                        `;
+                        historyContent.appendChild(div);
+                    });
+                    document.getElementById('clearHistoryBtn').style.display = 'block';
+                } else {
+                    historyContent.innerHTML = `<div class="empty-history"><p>No history yet...</p><p>Perform your first calculation to see it here!</p></div>`;
+                    document.getElementById('clearHistoryBtn').style.display = 'none';
+                }
+            } catch (err) {
+                historyContent.innerHTML = `<div class="empty-history"><p>Error loading history.</p></div>`;
+            }
+        }
+
+        // Call fetchHistory on page load
+        window.addEventListener('DOMContentLoaded', fetchHistory);
 
         // Utility Functions
         function showResult(element, text, type) {

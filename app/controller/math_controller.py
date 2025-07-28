@@ -1,4 +1,3 @@
-
 from model import db_connection
 from model import operation_model
 from utils.auth_utils import get_user_id_from_token
@@ -97,3 +96,11 @@ class MathController:
         except Exception:
             logging.exception("Error in factorial calculation")
             return None, 'Eroare la calculul factorialului!'
+    def get_history(self):
+        try:
+            user_id = get_user_id_from_token()
+            history = operation_model.get_user_history(user_id)
+            return history
+        except Exception:
+            logging.exception("Error retrieving history")
+            return None, 'Eroare la recuperarea istoricului!'
