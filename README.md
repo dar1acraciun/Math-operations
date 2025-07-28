@@ -1,10 +1,10 @@
 # Math Operations API
 
-## Descriere
+## Description
 
-Acest proiect este o aplicație web modulară construită cu Flask, care oferă operații matematice (putere, factorial, Fibonacci), autentificare cu JWT, logare evenimente în Kafka, caching cu Redis, metrici Prometheus și persistare date în MySQL. Include o interfață web modernă pentru utilizatori și API-uri pentru operații matematice.
+This project is a modular web application built with Flask, offering mathematical operations (power, factorial, Fibonacci), JWT authentication, event logging to Kafka, Redis caching, Prometheus metrics, and MySQL data persistence. It includes a modern web interface for users and APIs for mathematical operations.
 
-## Tehnologii folosite
+## Technologies Used
 - Python 3.10+
 - Flask
 - MySQL
@@ -12,60 +12,60 @@ Acest proiect este o aplicație web modulară construită cu Flask, care oferă 
 - Kafka & Zookeeper
 - Docker & Docker Compose
 - Prometheus
-- Pydantic (validare request-uri)
-- Werkzeug (hashing parole)
+- Pydantic (request validation)
+- Werkzeug (password hashing)
 - JWT (PyJWT)
 
-## Structura proiectului
+## Project Structure
 ```
 app/
-  controller/         # Logica pentru autentificare, operații matematice, înregistrare
-  model/              # Interacțiune cu baza de date (utilizatori, operații)
-  routes/             # Rute Flask (API și pagini)
-  schemas/            # Schemas Pydantic pentru validare request/response
-  utils/              # Utilitare: JWT, Kafka, cache, etc
-  view/               # HTML, JS, CSS pentru frontend
-  logger.log          # Loguri tehnice
-  kafka_consumed.log  # Loguri business/event din Kafka
-requirements.txt      # Dependențe Python
-Dockerfile            # Build imagine backend
+  controller/         # Logic for authentication, math operations, registration
+  model/              # Database interaction (users, operations)
+  routes/             # Flask routes (API and pages)
+  schemas/            # Pydantic schemas for request/response validation
+  utils/              # Utilities: JWT, Kafka, cache, etc
+  view/               # HTML, JS, CSS for frontend
+  logger.log          # Technical logs
+  kafka_consumed.log  # Business/event logs from Kafka
+requirements.txt      # Python dependencies
+Dockerfile            # Backend image build
 ```
 
-## Funcționalități principale
-- **Autentificare și înregistrare** cu JWT, validare AJAX, mesaje toast
-- **Operații matematice**: putere, factorial, Fibonacci (API REST)
-- **Persistență**: utilizatori și operații în MySQL
-- **Caching**: rezultate operații cu Redis
-- **Logare evenimente**: Kafka producer (la acțiuni cheie), consumer (scrie în fișier)
-- **Metrici Prometheus**: endpoint `/metrics` pentru monitorizare
-- **Streaming loguri**: endpoint pentru ultimele N linii din log Kafka
-- **Frontend modern**: pagini HTML cu AJAX, feedback instant
+## Main Features
+- **Authentication and registration** with JWT, AJAX validation, toast messages
+- **Math operations**: power, factorial, Fibonacci (REST API)
+- **Persistence**: users and operations in MySQL
+- **Caching**: operation results with Redis
+- **Event logging**: Kafka producer (on key actions), consumer (writes to file)
+- **Prometheus metrics**: `/metrics` endpoint for monitoring
+- **Log streaming**: endpoint for the last N lines from the Kafka log
+- **Modern frontend**: HTML pages with AJAX, instant feedback
 
-## Cum rulezi proiectul (local cu Docker Compose)
-1. Clonează repo-ul și intră în director:
+## How to Run the Project (locally with Docker Compose)
+1. Clone the repo and enter the directory:
    ```sh
    git clone <repo-url>
    cd Math-operations
    ```
-2. Pornește toate serviciile:
+2. Start all services:
    ```sh
    docker-compose up --build
    ```
-3. Accesează aplicația la `http://localhost:5000/mathSolve/login`
+3. Access the app at `http://localhost:5000/mathSolve/login`
 
-## Endpoints principale
-- `/mathSolve/login` și `/mathSolve/register` — autentificare și înregistrare
-- `/mathSolve/power`, `/mathSolve/fibonacci`, `/mathSolve/factorial` — API POST pentru operații matematice
-- `/metrics` — metrici Prometheus
-- `/stream-logs` — streaming loguri Kafka
+## Main Endpoints
+- `/mathSolve/login` and `/mathSolve/register` — authentication and registration
+- `/mathSolve/power`, `/mathSolve/fibonacci`, `/mathSolve/factorial` — POST API for math operations
+- `/metrics` — Prometheus metrics
+- `/stream-logs` — Kafka log streaming
 
-## Configurare variabile de mediu
-- `SECRET_KEY` — cheie secretă JWT (default: `dev_secret`)
-- Setează în `.env` sau direct în Docker Compose
+## Environment Variable Configuration
+- `SECRET_KEY` — JWT secret key (default: `dev_secret`)
+- Set in `.env` or directly in Docker Compose
 
-## Note suplimentare
-- Pentru dezvoltare locală fără Docker, instalează dependențele cu `pip install -r requirements.txt` și pornește serviciile necesare (MySQL, Redis, Kafka) manual.
-- Codul respectă PEP8/flake8.
+## Additional Notes
+- For local development without Docker, install dependencies with `pip install -r requirements.txt` and start the required services (MySQL, Redis, Kafka) manually.
+- The code is PEP8/flake8 compliant.
 
-## Autori
-- [Numele tău]
+## Authors
+- [Your Name]
