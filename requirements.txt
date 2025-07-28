@@ -6,3 +6,4 @@ Flask-Caching
 redis
 prometheus-flask-exporter
 kafka-python
+flake8

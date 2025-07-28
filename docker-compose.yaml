@@ -12,6 +12,12 @@ services:
     depends_on:
       - kafka
     restart: always
+  
+  lint:
+    build: .
+    volumes:
+      - .:/app
+    command: flake8 .
 
   db:
     image: mysql:8.0
