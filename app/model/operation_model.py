@@ -15,12 +15,15 @@ def insert_operation(connection,
     cursor.execute(query, (endpoint, input_data, result, user_id))
     connection.commit()
 
+
 def get_user_history(user_id, limit=20):
     from model import db_connection
     db = db_connection.get_connection()
     cursor = db.cursor()
     cursor.execute(
-        "SELECT endpoint, result, created_at FROM OPERATIONS WHERE user_id = %s ORDER BY created_at DESC LIMIT %s",
+        "SELECT endpoint, result, created_at "
+        "FROM OPERATIONS WHERE user_id = %s "
+        "ORDER BY created_at DESC LIMIT %s",
         (user_id, limit)
     )
     rows = cursor.fetchall()

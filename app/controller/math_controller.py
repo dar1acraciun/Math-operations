@@ -96,6 +96,7 @@ class MathController:
         except Exception:
             logging.exception("Error in factorial calculation")
             return None, 'Eroare la calculul factorialului!'
+
     def get_history(self):
         try:
             user_id = get_user_id_from_token()

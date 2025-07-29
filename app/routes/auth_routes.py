@@ -96,7 +96,8 @@ def register_post():
     password = request.form.get('password')
     conf_password = request.form.get('conf_password')
     register_controller_instance = register_controller.RegisterController()
-    from utils.matrics_utils import registration_counter, endpoint_response_time
+    from utils.matrics_utils import registration_counter
+    from utils.matrics_utils import endpoint_response_time
     import time
     start = time.time()
     result = register_controller_instance.register(

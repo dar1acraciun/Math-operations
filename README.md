@@ -79,7 +79,10 @@ Below are some screenshots of the application in action:
   ![Registration Page](screenshots/image-2.png)
 - Calculator Page:
   ![Calculator Page](screenshots/image-3.png)
-
+- History:
+  ![History](screenshots/image.png)
+- Metrics
+  ![Metrics](screenshots/metrics.png)
 
 ## Authors
 -  Daria Craciun

@@ -1,8 +1,4 @@
 
-# Endpoint to fetch calculation history for the current user
-from utils.auth_utils import get_user_id_from_token
-from model import operation_model
-from flask import session
 from flask import Blueprint, request, jsonify
 from controller import math_controller
 from schemas.math_schemas import (
@@ -65,11 +61,15 @@ def factorial():
             success=False,
             error='Eroare la calculul factorialului!'
         )
-    
+
+
 @math_bp.route('/history', methods=['GET'])
 def history():
     try:
         history = math_controller.get_history()
         return jsonify(success=True, history=history)
     except Exception:
-        return jsonify(success=False, error='Eroare la recuperarea istoricului!')
+        return jsonify(
+            success=False,
+            error='Eroare la recuperarea istoricului!'
+        )
